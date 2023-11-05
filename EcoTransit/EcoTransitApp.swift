@@ -13,8 +13,8 @@ struct EcoTransitApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            Location()
+                      .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

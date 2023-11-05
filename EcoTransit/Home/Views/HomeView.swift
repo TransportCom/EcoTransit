@@ -7,8 +7,8 @@ import SwiftUI
 struct HomeView: View {
     @State private var showLocationSearchView = false
     var body: some View {
-        ZStack (alignment: .top) {
-            MapViewRepresentable()
+          ZStack (alignment: .top) {
+          MapViewRepresentable()
                 .ignoresSafeArea()
             if showLocationSearchView{
                 LocationSearchView()
@@ -28,6 +28,8 @@ struct HomeView: View {
                                     $showLocationSearchView)
                 .padding(.top, 4)
                 .padding(.leading)
+        
+        
         }
         
     }
