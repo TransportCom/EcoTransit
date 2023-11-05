@@ -16,6 +16,13 @@
 		8DCAF8A92AF6ECE400912616 /* EcoTransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8A82AF6ECE400912616 /* EcoTransitTests.swift */; };
 		8DCAF8B32AF6ECE400912616 /* EcoTransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8B22AF6ECE400912616 /* EcoTransitUITests.swift */; };
 		8DCAF8B52AF6ECE400912616 /* EcoTransitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8B42AF6ECE400912616 /* EcoTransitUITestsLaunchTests.swift */; };
+		8DCAF8C22AF6F3D300912616 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8C12AF6F3D300912616 /* MapViewRepresentable.swift */; };
+		8DCAF8C42AF6F78D00912616 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8C32AF6F78D00912616 /* LocationManager.swift */; };
+		8DCAF8CB2AF70CD800912616 /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8CA2AF70CD800912616 /* LocationSearchActivationView.swift */; };
+		8DCAF8CE2AF7159F00912616 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8CD2AF7159F00912616 /* HomeView.swift */; };
+		8DCAF8D02AF717C500912616 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8CF2AF717C500912616 /* MapViewActionButton.swift */; };
+		8DCAF8D42AF71A2600912616 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8D32AF71A2600912616 /* LocationSearchView.swift */; };
+		8DCAF8D62AF71F3700912616 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8D52AF71F3700912616 /* LocationSearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,13 @@
 		8DCAF8AE2AF6ECE400912616 /* EcoTransitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoTransitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCAF8B22AF6ECE400912616 /* EcoTransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitUITests.swift; sourceTree = "<group>"; };
 		8DCAF8B42AF6ECE400912616 /* EcoTransitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DCAF8C12AF6F3D300912616 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		8DCAF8C32AF6F78D00912616 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		8DCAF8CA2AF70CD800912616 /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
+		8DCAF8CD2AF7159F00912616 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8DCAF8CF2AF717C500912616 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
+		8DCAF8D32AF71A2600912616 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		8DCAF8D52AF71F3700912616 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */,
+				8DCAF8CC2AF70FF900912616 /* Home */,
+				8DCAF8C72AF70C8A00912616 /* LocationSearch */,
 				8DCAF8942AF6ECE200912616 /* ContentView.swift */,
 				8DCAF8962AF6ECE400912616 /* Assets.xcassets */,
 				8DCAF89B2AF6ECE400912616 /* Persistence.swift */,
@@ -131,6 +147,59 @@
 				8DCAF8B42AF6ECE400912616 /* EcoTransitUITestsLaunchTests.swift */,
 			);
 			path = EcoTransitUITests;
+			sourceTree = "<group>";
+		};
+		8DCAF8C72AF70C8A00912616 /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				8DCAF8C92AF70CAB00912616 /* Views */,
+				8DCAF8C82AF70C9D00912616 /* ViewModel */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		8DCAF8C82AF70C9D00912616 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8DCAF8C92AF70CAB00912616 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DCAF8CA2AF70CD800912616 /* LocationSearchActivationView.swift */,
+				8DCAF8D32AF71A2600912616 /* LocationSearchView.swift */,
+				8DCAF8D52AF71F3700912616 /* LocationSearchResultCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8DCAF8CC2AF70FF900912616 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8DCAF8D22AF717E300912616 /* ViewModel */,
+				8DCAF8D12AF717CD00912616 /* Views */,
+				8DCAF8C32AF6F78D00912616 /* LocationManager.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8DCAF8D12AF717CD00912616 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DCAF8CD2AF7159F00912616 /* HomeView.swift */,
+				8DCAF8C12AF6F3D300912616 /* MapViewRepresentable.swift */,
+				8DCAF8CF2AF717C500912616 /* MapViewActionButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8DCAF8D22AF717E300912616 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +332,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCAF8C22AF6F3D300912616 /* MapViewRepresentable.swift in Sources */,
+				8DCAF8D02AF717C500912616 /* MapViewActionButton.swift in Sources */,
 				8DCAF89C2AF6ECE400912616 /* Persistence.swift in Sources */,
+				8DCAF8C42AF6F78D00912616 /* LocationManager.swift in Sources */,
 				8DCAF8952AF6ECE200912616 /* ContentView.swift in Sources */,
+				8DCAF8D42AF71A2600912616 /* LocationSearchView.swift in Sources */,
 				8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */,
+				8DCAF8CE2AF7159F00912616 /* HomeView.swift in Sources */,
 				8DCAF89F2AF6ECE400912616 /* EcoTransit.xcdatamodeld in Sources */,
+				8DCAF8CB2AF70CD800912616 /* LocationSearchActivationView.swift in Sources */,
+				8DCAF8D62AF71F3700912616 /* LocationSearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +503,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EcoTransit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "please allow us to access to your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -455,6 +532,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EcoTransit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "please allow us to access to your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
