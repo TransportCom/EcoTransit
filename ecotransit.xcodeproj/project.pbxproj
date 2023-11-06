@@ -13,6 +13,10 @@
 		1B701ADA2AF656B600253DE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B701AD92AF656B600253DE1 /* Preview Assets.xcassets */; };
 		1B701ADC2AF656B600253DE1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701ADB2AF656B600253DE1 /* Persistence.swift */; };
 		1B701ADF2AF656B600253DE1 /* ecotransit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B701ADD2AF656B600253DE1 /* ecotransit.xcdatamodeld */; };
+		1B701AEC2AF65A1000253DE1 /* LoginInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AEB2AF65A1000253DE1 /* LoginInView.swift */; };
+		1B701AEE2AF65A3000253DE1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AED2AF65A3000253DE1 /* SignInView.swift */; };
+		1B701AF02AF65AEF00253DE1 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AEF2AF65AEF00253DE1 /* CustomViews.swift */; };
+		1BAF32522AF7B765007A01D5 /* chooseRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAF32512AF7B765007A01D5 /* chooseRoleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		1B701AD92AF656B600253DE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B701ADB2AF656B600253DE1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		1B701ADE2AF656B600253DE1 /* ecotransit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ecotransit.xcdatamodel; sourceTree = "<group>"; };
+		1B701AEB2AF65A1000253DE1 /* LoginInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInView.swift; sourceTree = "<group>"; };
+		1B701AED2AF65A3000253DE1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		1B701AEF2AF65AEF00253DE1 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		1BAF32512AF7B765007A01D5 /* chooseRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chooseRoleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,8 @@
 		1B701AD12AF656B200253DE1 /* ecotransit */ = {
 			isa = PBXGroup;
 			children = (
+				1B701AEA2AF6593100253DE1 /* SupportingViews */,
+				1B701AE52AF658D600253DE1 /* views */,
 				1B701AD22AF656B200253DE1 /* ecotransitApp.swift */,
 				1B701AD42AF656B200253DE1 /* ContentView.swift */,
 				1B701AD62AF656B600253DE1 /* Assets.xcassets */,
@@ -71,6 +81,24 @@
 				1B701AD92AF656B600253DE1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1B701AE52AF658D600253DE1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1B701AEB2AF65A1000253DE1 /* LoginInView.swift */,
+				1B701AED2AF65A3000253DE1 /* SignInView.swift */,
+				1BAF32512AF7B765007A01D5 /* chooseRoleView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		1B701AEA2AF6593100253DE1 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				1B701AEF2AF65AEF00253DE1 /* CustomViews.swift */,
+			);
+			path = SupportingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B701AEE2AF65A3000253DE1 /* SignInView.swift in Sources */,
+				1B701AEC2AF65A1000253DE1 /* LoginInView.swift in Sources */,
+				1B701AF02AF65AEF00253DE1 /* CustomViews.swift in Sources */,
 				1B701ADC2AF656B600253DE1 /* Persistence.swift in Sources */,
 				1B701AD52AF656B200253DE1 /* ContentView.swift in Sources */,
+				1BAF32522AF7B765007A01D5 /* chooseRoleView.swift in Sources */,
 				1B701AD32AF656B200253DE1 /* ecotransitApp.swift in Sources */,
 				1B701ADF2AF656B600253DE1 /* ecotransit.xcdatamodeld in Sources */,
 			);
