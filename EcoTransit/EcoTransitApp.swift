@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct EcoTransitApp: App {
+    @StateObject var locationViewModel = LocationSearchViewModel()
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            Location()
-                      .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            WelcomeSwipeView()
+                      .environmentObject(locationViewModel)
         }
     }
 }

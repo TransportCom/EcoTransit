@@ -9,31 +9,41 @@ struct HomeView: View {
     var body: some View {
           ZStack (alignment: .top) {
           MapViewRepresentable()
-                .ignoresSafeArea()
+         
             if showLocationSearchView{
-                LocationSearchView()
+               
+                LocationSearchView(showLocationSearchView:$showLocationSearchView)
+                
+                MapViewActionButton(showLocationSearchView:
+                                        $showLocationSearchView)
+                    .padding(.top, 5)
+                    .padding(.leading)
+                
+            
             }else {
-                LocationSearchActivationView()
-                    .padding(.top, 72)
-                    .onTapGesture {
-                        withAnimation(.spring())
-                        {
-                            showLocationSearchView.toggle()
+                HStack {
+                    MapViewActionButton(showLocationSearchView:
+                                            $showLocationSearchView)
+                    .padding(.top, 70)
+                    .padding(.leading)
+                    
+                    LocationSearchActivationView()
+                        .padding(.top, 72)
+                        .onTapGesture {
+                            withAnimation(.spring())
+                            {
+                                showLocationSearchView.toggle()
+                            }
                         }
-                        }
+                }
                                       
                     }
             }
-            MapViewActionButton(showLocationSearchView:
-                                    $showLocationSearchView)
-                .padding(.top, 4)
-                .padding(.leading)
-        
+          .navigationBarBackButtonHidden(true)
         
         }
         
     }
-
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

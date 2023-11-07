@@ -10,6 +10,8 @@
 		8D3C8F4B2AF7C0760033B6C6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4A2AF7C0760033B6C6 /* Location.swift */; };
 		8D3C8F4D2AF7C0870033B6C6 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */; };
 		8D3C8F4F2AF7C0990033B6C6 /* TrackYourRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4E2AF7C0990033B6C6 /* TrackYourRide.swift */; };
+		8D629AD22AF90DE300B6F08E /* WeclomeSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D629AD12AF90DE300B6F08E /* WeclomeSwipeView.swift */; };
+		8D6E31D62AF99B76008C4AC6 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */; };
 		8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */; };
 		8DCAF8952AF6ECE200912616 /* Content1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8942AF6ECE200912616 /* Content1View.swift */; };
 		8DCAF8972AF6ECE400912616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCAF8962AF6ECE400912616 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		8D3C8F4A2AF7C0760033B6C6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		8D3C8F4E2AF7C0990033B6C6 /* TrackYourRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackYourRide.swift; sourceTree = "<group>"; };
+		8D629AD12AF90DE300B6F08E /* WeclomeSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeclomeSwipeView.swift; sourceTree = "<group>"; };
+		8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		8DCAF88F2AF6ECE200912616 /* EcoTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitApp.swift; sourceTree = "<group>"; };
 		8DCAF8942AF6ECE200912616 /* Content1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content1View.swift; sourceTree = "<group>"; };
@@ -107,6 +111,10 @@
 		8D3C8F3E2AF7B2420033B6C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */,
+				8D3C8F4A2AF7C0760033B6C6 /* Location.swift */,
+				8D3C8F4E2AF7C0990033B6C6 /* TrackYourRide.swift */,
+				8D629AD12AF90DE300B6F08E /* WeclomeSwipeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,9 +122,6 @@
 		8D3C8F3F2AF7B2500033B6C6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8D3C8F4A2AF7C0760033B6C6 /* Location.swift */,
-				8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */,
-				8D3C8F4E2AF7C0990033B6C6 /* TrackYourRide.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -144,11 +149,11 @@
 		8DCAF8912AF6ECE200912616 /* EcoTransit */ = {
 			isa = PBXGroup;
 			children = (
-				8D3C8F3D2AF7AF230033B6C6 /* Welcome */,
-				8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */,
-				8DCAF8CC2AF70FF900912616 /* Home */,
 				8DCAF8C72AF70C8A00912616 /* LocationSearch */,
+				8D3C8F3D2AF7AF230033B6C6 /* Welcome */,
+				8DCAF8CC2AF70FF900912616 /* Home */,
 				8DCAF8942AF6ECE200912616 /* Content1View.swift */,
+				8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */,
 				8DCAF8962AF6ECE400912616 /* Assets.xcassets */,
 				8DCAF89B2AF6ECE400912616 /* Persistence.swift */,
 				8DCAF89D2AF6ECE400912616 /* EcoTransit.xcdatamodeld */,
@@ -194,6 +199,7 @@
 		8DCAF8C82AF70C9D00912616 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 				8DCAF8C22AF6F3D300912616 /* MapViewRepresentable.swift in Sources */,
 				8DCAF8D02AF717C500912616 /* MapViewActionButton.swift in Sources */,
 				8D3C8F4F2AF7C0990033B6C6 /* TrackYourRide.swift in Sources */,
+				8D6E31D62AF99B76008C4AC6 /* LocationSearchViewModel.swift in Sources */,
 				8DCAF89C2AF6ECE400912616 /* Persistence.swift in Sources */,
 				8D3C8F4D2AF7C0870033B6C6 /* Driver.swift in Sources */,
 				8DCAF8C42AF6F78D00912616 /* LocationManager.swift in Sources */,
@@ -376,6 +383,7 @@
 				8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */,
 				8DCAF8CE2AF7159F00912616 /* HomeView.swift in Sources */,
 				8DCAF89F2AF6ECE400912616 /* EcoTransit.xcdatamodeld in Sources */,
+				8D629AD22AF90DE300B6F08E /* WeclomeSwipeView.swift in Sources */,
 				8DCAF8CB2AF70CD800912616 /* LocationSearchActivationView.swift in Sources */,
 				8D3C8F4B2AF7C0760033B6C6 /* Location.swift in Sources */,
 				8DCAF8D62AF71F3700912616 /* LocationSearchResultCell.swift in Sources */,
