@@ -9,7 +9,7 @@ struct HomeView: View {
     var body: some View {
           ZStack (alignment: .top) {
           MapViewRepresentable()
-         
+                
             if showLocationSearchView{
                
                 LocationSearchView(showLocationSearchView:$showLocationSearchView)
@@ -24,11 +24,11 @@ struct HomeView: View {
                 HStack {
                     MapViewActionButton(showLocationSearchView:
                                             $showLocationSearchView)
-                    .padding(.top, 70)
+                    .padding(.top, 50)
                     .padding(.leading)
                     
                     LocationSearchActivationView()
-                        .padding(.top, 72)
+                        .padding(.top, 52)
                         .onTapGesture {
                             withAnimation(.spring())
                             {
