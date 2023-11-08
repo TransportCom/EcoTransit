@@ -13,6 +13,7 @@
 		8D3C8F4F2AF7C0990033B6C6 /* TrackYourRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4E2AF7C0990033B6C6 /* TrackYourRide.swift */; };
 		8D629AD22AF90DE300B6F08E /* WeclomeSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D629AD12AF90DE300B6F08E /* WeclomeSwipeView.swift */; };
 		8D6E31D62AF99B76008C4AC6 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */; };
+		8D90B04F2AFBE9BB00DDB461 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */; };
 		8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */; };
 		8DCAF8952AF6ECE200912616 /* Content1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8942AF6ECE200912616 /* Content1View.swift */; };
 		8DCAF8972AF6ECE400912616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCAF8962AF6ECE400912616 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		8D3C8F4E2AF7C0990033B6C6 /* TrackYourRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackYourRide.swift; sourceTree = "<group>"; };
 		8D629AD12AF90DE300B6F08E /* WeclomeSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeclomeSwipeView.swift; sourceTree = "<group>"; };
 		8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		8DCAF88F2AF6ECE200912616 /* EcoTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitApp.swift; sourceTree = "<group>"; };
 		8DCAF8942AF6ECE200912616 /* Content1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content1View.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8D90B04D2AFBE93400DDB461 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8DCAF8862AF6ECE200912616 = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 		8DCAF8CC2AF70FF900912616 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8D90B04D2AFBE93400DDB461 /* Models */,
 				8DCAF8D22AF717E300912616 /* ViewModel */,
 				8DCAF8D12AF717CD00912616 /* Views */,
 				8DCAF8C32AF6F78D00912616 /* LocationManager.swift */,
@@ -407,6 +418,7 @@
 				8DCAF8C42AF6F78D00912616 /* LocationManager.swift in Sources */,
 				8DCAF8952AF6ECE200912616 /* Content1View.swift in Sources */,
 				8D018FA02AFAFE9300F6DE45 /* RideRequestView.swift in Sources */,
+				8D90B04F2AFBE9BB00DDB461 /* MapViewState.swift in Sources */,
 				8DCAF8D42AF71A2600912616 /* LocationSearchView.swift in Sources */,
 				8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */,
 				8DCAF8CE2AF7159F00912616 /* HomeView.swift in Sources */,

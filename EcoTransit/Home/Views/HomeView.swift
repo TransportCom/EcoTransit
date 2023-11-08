@@ -6,50 +6,68 @@
 import SwiftUI
 struct HomeView: View {
     @State private var showLocationSearchView = false
+    @State private var mapState = MapViewState.noInput
+    
     var body: some View {
        
-          ZStack (alignment: .top) {
-          MapViewRepresentable()
+        ZStack (alignment: .bottom){
+            ZStack (alignment: .top) {
+              MapViewRepresentable(mapState: $mapState)
+                    .ignoresSafeArea()
+                    
+                if mapState == .searchingForLocation
+                {
+                        
+                 
+                            LocationSearchView(mapState: $mapState)
+                    .edgesIgnoringSafeArea(.all)
+                        .navigationBarBackButtonHidden(true)
+                        .padding(.top, 23)
+
                 
-            if showLocationSearchView{
-               
-                VStack {
-                    
-                    MapViewActionButton(showLocationSearchView: $showLocationSearchView)
-                        .padding(.top, 50)
-                        .padding(.leading)
-
-                   
-                        LocationSearchView(showLocationSearchView: $showLocationSearchView)
-                   
-                    
-                }
-
-            
-            }else {
-                HStack {
-                    MapViewActionButton(showLocationSearchView:
-                                            $showLocationSearchView)
-                    .padding(.top, 50)
-                    .padding(.leading)
-                    
+                }else if mapState == .noInput{
                     LocationSearchActivationView()
-                        .padding(.top, 52)
+                        .padding(.top, 20)
+                        .padding(.trailing, -60)
                         .onTapGesture {
                             withAnimation(.spring())
                             {
-                                showLocationSearchView.toggle()
-                            }
-                        }
+                                mapState = .searchingForLocation
+                            }}
                 }
-                                      
+                 
+                        MapViewActionButton(mapState: $mapState)
+                        .padding(.top, 23)
+                        
+                        
+                       
                     }
-            } .edgesIgnoringSafeArea(.all)
-          .navigationBarBackButtonHidden(true)
-        
+                
+             if mapState == .loctionSelected{
+              
+                
+                    RideRequestView()
+                        .transition(.move(edge: .bottom))
+                        .padding(.bottom ,10)
+            
+                
+            }
+            } .edgesIgnoringSafeArea(.bottom)
+            .navigationBarBackButtonHidden(true)
+            
+            
+            
+            
+           
+            
+            
+            
+            
         }
-        
-    }
+        }
+
+
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
