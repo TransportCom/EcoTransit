@@ -18,6 +18,9 @@ struct SignInView: View {
     @State private var email: String = ""
     @State private var password : String = ""
     @State private var prenom : String = ""
+    @State private var tel: String = ""
+    @State private var nom : String = ""
+    @State private var image : String = ""
 
     var body: some View {
         NavigationView{
@@ -32,7 +35,7 @@ struct SignInView: View {
                                     .padding(.leading, 20)
                                     .cornerRadius(50)
 
-                                Text("Welcome, \n  Eco-transit")
+                                Text("Welcome, \n Eco-transit")
                                     .foregroundColor(Color("background"))
                                     .font(.system(size: 35))
                                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -42,26 +45,45 @@ struct SignInView: View {
                             }
                             
                         }
-                        VStack(spacing: 30){
-                            VStack(spacing: 30){
+                        VStack{
+                            VStack(spacing: 20){
+                              
+                                CustomText(placeHolder: "nom", bColor: "text", tOpacity: 0.6, value: $nom)
+                                    .padding(.horizontal, 10)
+                                CustomText(placeHolder: "prenom", bColor: "text", tOpacity: 0.6, value: $prenom)
+                                    .padding(.horizontal, 10)
                                 CustomText(placeHolder: "email", bColor: "text", tOpacity: 0.6, value: $email)
+                                    .padding(.horizontal, 10)
+                                CustomText(placeHolder: "numero de telephone", bColor: "text", tOpacity: 0.6, value: $tel)
+                                    .padding(.horizontal, 10)
+                                CustomText(placeHolder: "prenom", bColor: "text", tOpacity: 0.6, value: $password)
                                     .padding(.horizontal, 10)
                                 CustomText(placeHolder: "prenom", bColor: "text", tOpacity: 0.6, value: $prenom)
                                     .padding(.horizontal, 10)
 
                                 
                             }
+                            Spacer()
                             VStack{
                                 Button(action: {}, label: {
                                     Text("Forget Password ?")
                                         .font(.system(size: 18))
                                         .foregroundColor(Color("background2"))
                                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                    
                                 })
                                 Button(action: {}, label: {
                                     CustomButton(title: "Sign up", bgColor: "background2")
                                     
                                 })
+                                Text("                        or ")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 30))
+                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                    .padding(.horizontal, 20)
+                                
                             }.padding(.horizontal, 20)
                             HStack{
                                 Button(action: {}, label: {
@@ -88,25 +110,11 @@ struct SignInView: View {
                         }
                     }
                     Spacer()
-                    HStack{
-                        Text("Dont have an account")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .font(.system(size: 18))
-                        
-                        Button(action: {}, label: {
-                            Text("Sign up")
-                                .font(.system(size: 18))
-                                .foregroundColor(Color("background2"))
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        })
-                    }
-                    .frame(height: 63)
+              
+                    .frame(height: 40)
                     .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
-                    .background(Color("background"))
                     .ignoresSafeArea()
                 }
-              
             }
             .edgesIgnoringSafeArea(.bottom)
         }

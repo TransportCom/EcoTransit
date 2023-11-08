@@ -145,12 +145,16 @@ struct CustomButton: View {
 
 struct topbarview: View {
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        NavigationLink {
+            // destination view to navigation to
+            LoginInView()
+        } label:
+        {
             Image("back")
                 .resizable()
                 .frame(width: 17.5, height: 20.5)
                 .padding(.horizontal, 20)
             
-        })
+        }
     }
 }

@@ -1,26 +1,29 @@
 //
-//  chooseRoleView.swift
+//  ProfileView.swift
 //  ecotransit
 //
-//  Created by Mohamed Achi on 5/11/2023.
+//  Created by Mohamed Achi on 8/11/2023.
 //
 
 import SwiftUI
 import CoreData
 
-struct Role: Identifiable {
+struct profile: Identifiable {
     let id = UUID()
     var imageName: String
     let title: String
 }
 
-struct chooseRoleView: View {
+struct ProfileView: View {
+    
+    @Binding var presentSideMenu: Bool
+    
     @State private var username: String = ""
     
-    @State private var roleList: [Role] = [
-        Role(imageName: "entreprise", title: "entreprise"),
-        Role(imageName: "chauffeur", title: "chauffeur") ,
-        Role(imageName: "voyageur", title: "voyageur") ,
+    @State private var profileList: [profile] = [
+        profile(imageName: "entreprise", title: "entreprise"),
+        profile(imageName: "chauffeur", title: "chauffeur") ,
+        profile(imageName: "voyageur", title: "voyageur") ,
         // Add more roles as needed
     ]
     
@@ -29,9 +32,13 @@ struct chooseRoleView: View {
         ScrollView {
             VStack {
                 HStack {
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 60, height: 60)
+                    Button{
+                        presentSideMenu.toggle()
+                    } label: {
+                        Image("logo")
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                    }
                     Text("Eco-Transit")
                         .font(.title)
                 }
@@ -47,8 +54,8 @@ struct chooseRoleView: View {
                 }
                 .padding(.trailing, 20)
                 
-                ForEach(roleList) { role in
-                    RecentlyBookedRole(role: role)
+                ForEach(profileList) { profile in
+                    Recently(profile: profile)
                 }
                 .padding(.trailing, 5)
             }
@@ -57,19 +64,19 @@ struct chooseRoleView: View {
     }
 }
 
-struct RoleCard: View {
-    let role: Role
+struct optCard: View {
+    let profile: profile
 
     var body: some View {
         ZStack {
-            Image(role.imageName)
+            Image(profile.imageName)
                 .resizable()
                 .frame(width: 300, height: 300)
                 .cornerRadius(10)
 
             VStack(alignment: .leading, spacing: 10) {
                 Spacer()
-                Text(role.title)
+                Text(profile.title)
                     .font(.headline)
                     .foregroundColor(.black)
                     .cornerRadius(120)
@@ -81,8 +88,8 @@ struct RoleCard: View {
     }
 }
 
-struct RecentlyBookedRole: View {
-    let role: Role
+struct Recently: View {
+    let profile: profile
 
     var body: some View {
         ZStack { Button(action: {}, label: {
@@ -93,14 +100,14 @@ struct RecentlyBookedRole: View {
             
 
             HStack(spacing: 5) {
-                Image(role.imageName)
+                Image(profile.imageName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 100)
                     .cornerRadius(10)
 
                 VStack(alignment: .leading, spacing: 15) {
-                    Text(role.title)
+                    Text(profile.title)
                         .font(.system(size: 23, weight: .semibold))
                 }
                 .frame(maxWidth: .infinity)
@@ -113,7 +120,7 @@ struct RecentlyBookedRole: View {
    
 }
 
-struct CustomTextFieldStyle: TextFieldStyle {
+struct CustomTextprint: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
             .padding(EdgeInsets(top: 15, leading: 10, bottom: 15, trailing: 10))
@@ -125,8 +132,6 @@ struct CustomTextFieldStyle: TextFieldStyle {
     }
 }
 
-
 #Preview {
-    
-    chooseRoleView()
+ProfileView(presentSideMenu: .constant(false))
 }

@@ -13,7 +13,7 @@ struct ecotransitApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabbedView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
