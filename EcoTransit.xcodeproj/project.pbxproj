@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D018FA02AFAFE9300F6DE45 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D018F9F2AFAFE9300F6DE45 /* RideRequestView.swift */; };
 		8D3C8F4B2AF7C0760033B6C6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4A2AF7C0760033B6C6 /* Location.swift */; };
 		8D3C8F4D2AF7C0870033B6C6 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */; };
 		8D3C8F4F2AF7C0990033B6C6 /* TrackYourRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4E2AF7C0990033B6C6 /* TrackYourRide.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D018F9F2AFAFE9300F6DE45 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		8D3C8F4A2AF7C0760033B6C6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		8D3C8F4E2AF7C0990033B6C6 /* TrackYourRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackYourRide.swift; sourceTree = "<group>"; };
@@ -99,6 +101,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D018F9C2AFAFE5500F6DE45 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				8D018F9E2AFAFE6900F6DE45 /* ViewModel */,
+				8D018F9D2AFAFE6200F6DE45 /* Views */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		8D018F9D2AFAFE6200F6DE45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D018F9F2AFAFE9300F6DE45 /* RideRequestView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8D018F9E2AFAFE6900F6DE45 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8D3C8F3D2AF7AF230033B6C6 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +175,7 @@
 		8DCAF8912AF6ECE200912616 /* EcoTransit */ = {
 			isa = PBXGroup;
 			children = (
+				8D018F9C2AFAFE5500F6DE45 /* Trips */,
 				8DCAF8C72AF70C8A00912616 /* LocationSearch */,
 				8D3C8F3D2AF7AF230033B6C6 /* Welcome */,
 				8DCAF8CC2AF70FF900912616 /* Home */,
@@ -379,6 +406,7 @@
 				8D3C8F4D2AF7C0870033B6C6 /* Driver.swift in Sources */,
 				8DCAF8C42AF6F78D00912616 /* LocationManager.swift in Sources */,
 				8DCAF8952AF6ECE200912616 /* Content1View.swift in Sources */,
+				8D018FA02AFAFE9300F6DE45 /* RideRequestView.swift in Sources */,
 				8DCAF8D42AF71A2600912616 /* LocationSearchView.swift in Sources */,
 				8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */,
 				8DCAF8CE2AF7159F00912616 /* HomeView.swift in Sources */,
@@ -547,6 +575,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EcoTransit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "please allow us to access to your location";
+				INFOPLIST_KEY_NSLocationUsageDescription = "please allow us to access to your location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "please allow us to access to your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -576,6 +606,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EcoTransit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "please allow us to access to your location";
+				INFOPLIST_KEY_NSLocationUsageDescription = "please allow us to access to your location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "please allow us to access to your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
