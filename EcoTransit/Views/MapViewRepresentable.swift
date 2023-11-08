@@ -35,6 +35,7 @@ struct MapViewRepresentable: UIViewRepresentable {
             break
         case .loctionSelected:
             if let coordinate = locationViewModel.selectedLocationCoordinate {
+                print("DEBUG: coordinate is \(coordinate)")
                 context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
