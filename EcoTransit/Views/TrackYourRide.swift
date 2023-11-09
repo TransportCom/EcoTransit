@@ -30,6 +30,7 @@ struct TrackYourRide: View {
                     Text("Track your ride")
                         .font(.system(size: 30, weight: .medium, design: .default))
                         .frame(width: 200, height: 100)
+                        .foregroundColor(.green)
                     
                     Text("Huge drivers network helps you find comfortable,safe and cheap rode ")
                         .font(.system(size: 22, weight: .medium, design: .default))
@@ -52,7 +53,7 @@ struct TrackYourRide: View {
                                 .font(.headline)
                                 .foregroundColor(.white)
                                 .padding()
-                                .background(Color.blue)
+                                .background(Color.green)
                                 .cornerRadius(30)
                                 .frame(width: 300, height: 150)
                         }

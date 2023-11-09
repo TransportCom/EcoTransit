@@ -28,6 +28,7 @@ struct Location: View {
                 Text("Request a Ride")
                     .font(.system(size: 30, weight: .medium, design: .default))
                     .frame(width: 200, height: 100)
+                    .foregroundColor(.green)
                 
                 Text("Huge drivers network helps you find comfortable,safe and cheap rode ")
                     .font(.system(size: 22, weight: .medium, design: .default))

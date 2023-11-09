@@ -48,7 +48,7 @@ struct RideRequestView: View {
                     .padding(10)
                     
                     HStack {
-                        Text("Starbucks Coffee")
+                        Text("De Anza College")
                             .font(.system(size: 16,weight: .bold))
                             .foregroundColor(.green)
                         Spacer()

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Driver: View {
+struct DriverView: View {
     @State private var currentPage: CGFloat = 3.0 / 3.0
     @State private var navigateToLocation = false
     var body: some View {
@@ -18,7 +18,7 @@ struct Driver: View {
             VStack {
                 Spacer().frame(height: 50)
                 
-                Image("Driver")
+                Image("taxi")
                     .resizable()
                     .clipShape(Circle())
                     .aspectRatio(contentMode: .fill)
@@ -31,7 +31,7 @@ struct Driver: View {
                     .frame(width: 200, height: 100)
                     .foregroundColor(.green)
                 
-                Text("Huge drivers network helps you find comfortable,safe and cheap rode ")
+                Text("be a part of the driver community ")
                     .font(.system(size: 22, weight: .medium, design: .default))
                 
                 Spacer()
@@ -53,9 +53,9 @@ struct Driver: View {
     
     
     
-    struct Driver_Previews: PreviewProvider {
+    struct DriverView_Previews: PreviewProvider {
         static var previews: some View {
-            Driver()
+            DriverView()
         }
     }
     
