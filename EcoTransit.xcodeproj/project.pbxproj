@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852D2D9B070AAA313AC6159F /* Pods_EcoTransitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952572592EC1C3DA0A2317EA /* Pods_EcoTransitTests.framework */; };
 		8D018FA02AFAFE9300F6DE45 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D018F9F2AFAFE9300F6DE45 /* RideRequestView.swift */; };
 		8D3C8F4B2AF7C0760033B6C6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4A2AF7C0760033B6C6 /* Location.swift */; };
 		8D3C8F4D2AF7C0870033B6C6 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */; };
@@ -17,8 +18,16 @@
 		8D78B60B2AFD3F62001EBF97 /* DriverDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */; };
 		8D90B04F2AFBE9BB00DDB461 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */; };
 		8D90B0512AFC310300DDB461 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90B0502AFC310300DDB461 /* RideType.swift */; };
-		8DAB8DEB2AFCEFF900A1C9B1 /* DriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAB8DEA2AFCEFF900A1C9B1 /* DriverView.swift */; };
-		8DAB8DED2AFCF04400A1C9B1 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAB8DEC2AFCF04400A1C9B1 /* LocationView.swift */; };
+		8DAAF4FF2B00430000CB3012 /* ContentChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */; };
+		8DAAF5012B0043F200CB3012 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5002B0043F200CB3012 /* MessagesManager.swift */; };
+		8DAAF5042B00448C00CB3012 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5032B00448C00CB3012 /* MessageBubble.swift */; };
+		8DAAF5062B0044B300CB3012 /* MessageField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5052B0044B300CB3012 /* MessageField.swift */; };
+		8DAAF5082B0044CF00CB3012 /* TitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5072B0044CF00CB3012 /* TitleRow.swift */; };
+		8DAAF50D2B005A4B00CB3012 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF50C2B005A4B00CB3012 /* Message.swift */; };
+		8DAAF50F2B005DC000CB3012 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DAAF50E2B005DC000CB3012 /* GoogleService-Info.plist */; };
+		8DAAF5122B0065CA00CB3012 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAAF5112B0065CA00CB3012 /* FirebaseFirestore */; };
+		8DAAF5142B0065CA00CB3012 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAAF5132B0065CA00CB3012 /* FirebaseFirestoreSwift */; };
+		8DAAF5162B006B1A00CB3012 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5152B006B1A00CB3012 /* Extensions.swift */; };
 		8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */; };
 		8DCAF8952AF6ECE200912616 /* Content1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8942AF6ECE200912616 /* Content1View.swift */; };
 		8DCAF8972AF6ECE400912616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCAF8962AF6ECE400912616 /* Assets.xcassets */; };
@@ -35,6 +44,8 @@
 		8DCAF8D02AF717C500912616 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8CF2AF717C500912616 /* MapViewActionButton.swift */; };
 		8DCAF8D42AF71A2600912616 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8D32AF71A2600912616 /* LocationSearchView.swift */; };
 		8DCAF8D62AF71F3700912616 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAF8D52AF71F3700912616 /* LocationSearchResultCell.swift */; };
+		A9C318C45538B3B31C6CB31C /* Pods_EcoTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5EDBCBE33F33041E3A471E /* Pods_EcoTransit.framework */; };
+		D2FE12A73C529D3E6708E44D /* Pods_EcoTransit_EcoTransitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB8E63FDFD3DAF524990803 /* Pods_EcoTransit_EcoTransitUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +66,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08E3665DAE4F714A60164495 /* Pods-EcoTransitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoTransitTests.debug.xcconfig"; path = "Target Support Files/Pods-EcoTransitTests/Pods-EcoTransitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		40E81BC2163AC57E0A3457EF /* Pods-EcoTransit-EcoTransitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoTransit-EcoTransitUITests.debug.xcconfig"; path = "Target Support Files/Pods-EcoTransit-EcoTransitUITests/Pods-EcoTransit-EcoTransitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		457DF06E4377378CE0D6FE21 /* Pods-EcoTransit-EcoTransitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoTransit-EcoTransitUITests.release.xcconfig"; path = "Target Support Files/Pods-EcoTransit-EcoTransitUITests/Pods-EcoTransit-EcoTransitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4AB2ACD7A3C964288AEE69D8 /* Pods-EcoTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoTransit.release.xcconfig"; path = "Target Support Files/Pods-EcoTransit/Pods-EcoTransit.release.xcconfig"; sourceTree = "<group>"; };
+		4EFF4A668F52A43C786EF803 /* Pods-EcoTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoTransit.debug.xcconfig"; path = "Target Support Files/Pods-EcoTransit/Pods-EcoTransit.debug.xcconfig"; sourceTree = "<group>"; };
+		81F8210DF3D3EC1CC60E7937 /* Pods-EcoTransitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoTransitTests.release.xcconfig"; path = "Target Support Files/Pods-EcoTransitTests/Pods-EcoTransitTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D018F9F2AFAFE9300F6DE45 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		8D3C8F4A2AF7C0760033B6C6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
@@ -65,8 +82,14 @@
 		8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsView.swift; sourceTree = "<group>"; };
 		8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		8D90B0502AFC310300DDB461 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
-		8DAB8DEA2AFCEFF900A1C9B1 /* DriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverView.swift; sourceTree = "<group>"; };
-		8DAB8DEC2AFCF04400A1C9B1 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChatView.swift; sourceTree = "<group>"; };
+		8DAAF5002B0043F200CB3012 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
+		8DAAF5032B00448C00CB3012 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		8DAAF5052B0044B300CB3012 /* MessageField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageField.swift; sourceTree = "<group>"; };
+		8DAAF5072B0044CF00CB3012 /* TitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRow.swift; sourceTree = "<group>"; };
+		8DAAF50C2B005A4B00CB3012 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8DAAF50E2B005DC000CB3012 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DAAF5152B006B1A00CB3012 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8DCAF88F2AF6ECE200912616 /* EcoTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCAF8922AF6ECE200912616 /* EcoTransitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitApp.swift; sourceTree = "<group>"; };
 		8DCAF8942AF6ECE200912616 /* Content1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content1View.swift; sourceTree = "<group>"; };
@@ -86,6 +109,9 @@
 		8DCAF8CF2AF717C500912616 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		8DCAF8D32AF71A2600912616 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		8DCAF8D52AF71F3700912616 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
+		952572592EC1C3DA0A2317EA /* Pods_EcoTransitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoTransitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5EDBCBE33F33041E3A471E /* Pods_EcoTransit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoTransit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB8E63FDFD3DAF524990803 /* Pods_EcoTransit_EcoTransitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoTransit_EcoTransitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +119,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAAF5122B0065CA00CB3012 /* FirebaseFirestore in Frameworks */,
+				8DAAF5142B0065CA00CB3012 /* FirebaseFirestoreSwift in Frameworks */,
+				A9C318C45538B3B31C6CB31C /* Pods_EcoTransit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852D2D9B070AAA313AC6159F /* Pods_EcoTransitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FE12A73C529D3E6708E44D /* Pods_EcoTransit_EcoTransitUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,8 +150,19 @@
 				8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */,
 				8D90B0502AFC310300DDB461 /* RideType.swift */,
 				8D78B6042AFD3D2E001EBF97 /* DriverModel.swift */,
+				8DAAF50C2B005A4B00CB3012 /* Message.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8DAAF5022B00445800CB3012 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8DAAF5032B00448C00CB3012 /* MessageBubble.swift */,
+				8DAAF5052B0044B300CB3012 /* MessageField.swift */,
+				8DAAF5072B0044CF00CB3012 /* TitleRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		8DCAF8862AF6ECE200912616 = {
@@ -130,6 +172,8 @@
 				8DCAF8A72AF6ECE400912616 /* EcoTransitTests */,
 				8DCAF8B12AF6ECE400912616 /* EcoTransitUITests */,
 				8DCAF8902AF6ECE200912616 /* Products */,
+				DB5173A1882B1A34BAF612B6 /* Pods */,
+				A1B36CA7C77029668D3F9026 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,7 +190,8 @@
 		8DCAF8912AF6ECE200912616 /* EcoTransit */ = {
 			isa = PBXGroup;
 			children = (
-				8DCAF8C32AF6F78D00912616 /* LocationManager.swift */,
+				8DAAF50E2B005DC000CB3012 /* GoogleService-Info.plist */,
+				8DAAF5022B00445800CB3012 /* Components */,
 				8DCAF8D22AF717E300912616 /* ViewModel */,
 				8DCAF8D12AF717CD00912616 /* Views */,
 				8D90B04D2AFBE93400DDB461 /* Models */,
@@ -155,6 +200,7 @@
 				8DCAF89B2AF6ECE400912616 /* Persistence.swift */,
 				8DCAF89D2AF6ECE400912616 /* EcoTransit.xcdatamodeld */,
 				8DCAF8982AF6ECE400912616 /* Preview Content */,
+				8DAAF5152B006B1A00CB3012 /* Extensions.swift */,
 			);
 			path = EcoTransit;
 			sourceTree = "<group>";
@@ -198,10 +244,9 @@
 				8DCAF8D52AF71F3700912616 /* LocationSearchResultCell.swift */,
 				8DCAF8CD2AF7159F00912616 /* HomeView.swift */,
 				8DCAF8C12AF6F3D300912616 /* MapViewRepresentable.swift */,
-				8DAB8DEA2AFCEFF900A1C9B1 /* DriverView.swift */,
 				8DCAF8CF2AF717C500912616 /* MapViewActionButton.swift */,
-				8DAB8DEC2AFCF04400A1C9B1 /* LocationView.swift */,
 				8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */,
+				8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,9 +254,35 @@
 		8DCAF8D22AF717E300912616 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8DCAF8C32AF6F78D00912616 /* LocationManager.swift */,
 				8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */,
+				8DAAF5002B0043F200CB3012 /* MessagesManager.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1B36CA7C77029668D3F9026 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C5EDBCBE33F33041E3A471E /* Pods_EcoTransit.framework */,
+				FFB8E63FDFD3DAF524990803 /* Pods_EcoTransit_EcoTransitUITests.framework */,
+				952572592EC1C3DA0A2317EA /* Pods_EcoTransitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB5173A1882B1A34BAF612B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EFF4A668F52A43C786EF803 /* Pods-EcoTransit.debug.xcconfig */,
+				4AB2ACD7A3C964288AEE69D8 /* Pods-EcoTransit.release.xcconfig */,
+				40E81BC2163AC57E0A3457EF /* Pods-EcoTransit-EcoTransitUITests.debug.xcconfig */,
+				457DF06E4377378CE0D6FE21 /* Pods-EcoTransit-EcoTransitUITests.release.xcconfig */,
+				08E3665DAE4F714A60164495 /* Pods-EcoTransitTests.debug.xcconfig */,
+				81F8210DF3D3EC1CC60E7937 /* Pods-EcoTransitTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,15 +292,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DCAF8B82AF6ECE400912616 /* Build configuration list for PBXNativeTarget "EcoTransit" */;
 			buildPhases = (
+				00A980EB5A7B561081E17844 /* [CP] Check Pods Manifest.lock */,
 				8DCAF88B2AF6ECE200912616 /* Sources */,
 				8DCAF88C2AF6ECE200912616 /* Frameworks */,
 				8DCAF88D2AF6ECE200912616 /* Resources */,
+				8F4B2F0D8DE16C3DC19F99B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = EcoTransit;
+			packageProductDependencies = (
+				8DAAF5112B0065CA00CB3012 /* FirebaseFirestore */,
+				8DAAF5132B0065CA00CB3012 /* FirebaseFirestoreSwift */,
+			);
 			productName = EcoTransit;
 			productReference = 8DCAF88F2AF6ECE200912616 /* EcoTransit.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +315,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DCAF8BB2AF6ECE400912616 /* Build configuration list for PBXNativeTarget "EcoTransitTests" */;
 			buildPhases = (
+				4DD147268F0DB77569D6F020 /* [CP] Check Pods Manifest.lock */,
 				8DCAF8A02AF6ECE400912616 /* Sources */,
 				8DCAF8A12AF6ECE400912616 /* Frameworks */,
 				8DCAF8A22AF6ECE400912616 /* Resources */,
@@ -256,9 +334,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DCAF8BE2AF6ECE400912616 /* Build configuration list for PBXNativeTarget "EcoTransitUITests" */;
 			buildPhases = (
+				969D76660B8A290BCC0069F1 /* [CP] Check Pods Manifest.lock */,
 				8DCAF8AA2AF6ECE400912616 /* Sources */,
 				8DCAF8AB2AF6ECE400912616 /* Frameworks */,
 				8DCAF8AC2AF6ECE400912616 /* Resources */,
+				A86753DEBCC649D95F438F76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +382,9 @@
 				Base,
 			);
 			mainGroup = 8DCAF8862AF6ECE200912616;
+			packageReferences = (
+				8DAAF5102B0065CA00CB3012 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 8DCAF8902AF6ECE200912616 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,6 +403,7 @@
 			files = (
 				8DCAF89A2AF6ECE400912616 /* Preview Assets.xcassets in Resources */,
 				8DCAF8972AF6ECE400912616 /* Assets.xcassets in Resources */,
+				8DAAF50F2B005DC000CB3012 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,16 +423,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00A980EB5A7B561081E17844 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EcoTransit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD147268F0DB77569D6F020 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EcoTransitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4B2F0D8DE16C3DC19F99B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoTransit/Pods-EcoTransit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoTransit/Pods-EcoTransit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoTransit/Pods-EcoTransit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		969D76660B8A290BCC0069F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EcoTransit-EcoTransitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86753DEBCC649D95F438F76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoTransit-EcoTransitUITests/Pods-EcoTransit-EcoTransitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoTransit-EcoTransitUITests/Pods-EcoTransit-EcoTransitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoTransit-EcoTransitUITests/Pods-EcoTransit-EcoTransitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8DCAF88B2AF6ECE200912616 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8DCAF8C22AF6F3D300912616 /* MapViewRepresentable.swift in Sources */,
+				8DAAF5082B0044CF00CB3012 /* TitleRow.swift in Sources */,
 				8DCAF8D02AF717C500912616 /* MapViewActionButton.swift in Sources */,
-				8DAB8DEB2AFCEFF900A1C9B1 /* DriverView.swift in Sources */,
 				8D3C8F4F2AF7C0990033B6C6 /* TrackYourRide.swift in Sources */,
-				8DAB8DED2AFCF04400A1C9B1 /* LocationView.swift in Sources */,
 				8D6E31D62AF99B76008C4AC6 /* LocationSearchViewModel.swift in Sources */,
 				8DCAF89C2AF6ECE400912616 /* Persistence.swift in Sources */,
 				8D3C8F4D2AF7C0870033B6C6 /* Driver.swift in Sources */,
@@ -357,16 +543,22 @@
 				8D018FA02AFAFE9300F6DE45 /* RideRequestView.swift in Sources */,
 				8D78B60B2AFD3F62001EBF97 /* DriverDetailsView.swift in Sources */,
 				8D78B6052AFD3D2E001EBF97 /* DriverModel.swift in Sources */,
+				8DAAF50D2B005A4B00CB3012 /* Message.swift in Sources */,
 				8D90B0512AFC310300DDB461 /* RideType.swift in Sources */,
 				8D90B04F2AFBE9BB00DDB461 /* MapViewState.swift in Sources */,
 				8DCAF8D42AF71A2600912616 /* LocationSearchView.swift in Sources */,
+				8DAAF5042B00448C00CB3012 /* MessageBubble.swift in Sources */,
 				8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */,
 				8DCAF8CE2AF7159F00912616 /* HomeView.swift in Sources */,
+				8DAAF5062B0044B300CB3012 /* MessageField.swift in Sources */,
 				8DCAF89F2AF6ECE400912616 /* EcoTransit.xcdatamodeld in Sources */,
+				8DAAF5012B0043F200CB3012 /* MessagesManager.swift in Sources */,
 				8D629AD22AF90DE300B6F08E /* WeclomeSwipeView.swift in Sources */,
 				8DCAF8CB2AF70CD800912616 /* LocationSearchActivationView.swift in Sources */,
 				8D3C8F4B2AF7C0760033B6C6 /* Location.swift in Sources */,
+				8DAAF4FF2B00430000CB3012 /* ContentChatView.swift in Sources */,
 				8DCAF8D62AF71F3700912616 /* LocationSearchResultCell.swift in Sources */,
+				8DAAF5162B006B1A00CB3012 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +711,7 @@
 		};
 		8DCAF8B92AF6ECE400912616 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EFF4A668F52A43C786EF803 /* Pods-EcoTransit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -550,6 +743,7 @@
 		};
 		8DCAF8BA2AF6ECE400912616 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB2ACD7A3C964288AEE69D8 /* Pods-EcoTransit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -581,6 +775,7 @@
 		};
 		8DCAF8BC2AF6ECE400912616 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08E3665DAE4F714A60164495 /* Pods-EcoTransitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -600,6 +795,7 @@
 		};
 		8DCAF8BD2AF6ECE400912616 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81F8210DF3D3EC1CC60E7937 /* Pods-EcoTransitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -619,6 +815,7 @@
 		};
 		8DCAF8BF2AF6ECE400912616 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40E81BC2163AC57E0A3457EF /* Pods-EcoTransit-EcoTransitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -636,6 +833,7 @@
 		};
 		8DCAF8C02AF6ECE400912616 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 457DF06E4377378CE0D6FE21 /* Pods-EcoTransit-EcoTransitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -691,6 +889,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DAAF5102B0065CA00CB3012 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DAAF5112B0065CA00CB3012 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DAAF5102B0065CA00CB3012 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8DAAF5132B0065CA00CB3012 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DAAF5102B0065CA00CB3012 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8DCAF89D2AF6ECE400912616 /* EcoTransit.xcdatamodeld */ = {

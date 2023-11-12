@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-
 struct DriverDetailsView: View {
+    @Environment(\.presentationMode) var presentationMode
     var driverInfo: DriverModel
   
     var body: some View {
         NavigationView {
             ZStack {
-                VStack(alignment:.leading,spacing: 20) {
+                VStack(alignment:.leading, spacing: 20) {
                     Spacer()
                     Image("")
                         .resizable().cornerRadius(32)
@@ -29,6 +29,7 @@ struct DriverDetailsView: View {
                         
                         Button("Show Map") {
                             // Action to show the map
+                            presentationMode.wrappedValue.dismiss()
                         }
                         .foregroundColor(Color.green)
                         .padding(.top, 16)
@@ -39,7 +40,7 @@ struct DriverDetailsView: View {
                             .foregroundColor(.gray)
                             .padding(.bottom,1)
                         Text(driverInfo.reviews).font(.system(size: 16)).foregroundColor(.gray)
-                        Color("355E3B")
+                     
                             .frame(width: 70, height: 70)
                             .cornerRadius(15)
                         Spacer()
@@ -67,7 +68,7 @@ struct DriverDetailsView: View {
                         
                         Spacer()
                         
-                        Color("355E3B")
+                    Spacer()
                             .frame(width: 70, height: 70)
                             .cornerRadius(15)
                         
@@ -86,11 +87,12 @@ struct DriverDetailsView: View {
             .navigationBarTitle("driver info", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action: {
-             
+                presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "arrow.left")
                     .foregroundColor(Color.green)
             })
+            
         }
     }
 }

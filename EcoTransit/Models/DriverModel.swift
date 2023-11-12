@@ -18,7 +18,7 @@ struct DriverModel {
 }
 let allDrivers: [DriverModel] = [
     DriverModel(id: 1, name: "John Doe", location: "City Center", imageName: "driver1", description: "Experienced driver", reviews: "5 stars", rideType: .taxi),
-    DriverModel(id: 2, name: "Jane Smith", location: "Suburb", imageName: "driver2", description: "Friendly driver", reviews: "4.5 stars", rideType: .bus),
+    DriverModel(id: 2, name: "Jane Smith", location: "Suburb", imageName: "driver2", description: "Friendly driver", reviews: "4.5 stars", rideType: .bus)
     // Add more drivers with different ride types
 ]
 

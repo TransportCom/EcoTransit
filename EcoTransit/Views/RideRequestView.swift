@@ -5,21 +5,27 @@
 //  Created by imba on 8/11/2023.
 //
 
-
 import SwiftUI
+
 
 struct RideRequestView: View {
     @State private var selectedRideType: RideType = .taxi
+    @State private var offset: CGFloat = 0
+    @State private var isSwipedDown: Bool = false
+    @State private var isConfirmationPresented: Bool = false
+
+
     var body: some View {
         VStack {
+            
             Capsule()
                 .foregroundColor(Color(.systemGreen))
                 .frame(width: 48, height: 6)
+                
+            
             
             HStack {
-                
                 VStack {
-                    
                     HStack {
                         VStack {
                             Circle()
@@ -32,7 +38,8 @@ struct RideRequestView: View {
                                 .fill(.black)
                                 .frame(width: 8, height: 8)
                         }
-                    }.padding(10)
+                    }
+                    .padding(10)
                 }
                 
                 VStack(alignment: .leading, spacing: 24) {
@@ -49,82 +56,118 @@ struct RideRequestView: View {
                     
                     HStack {
                         Text("De Anza College")
-                            .font(.system(size: 16,weight: .bold))
+                            .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.green)
                         Spacer()
                         Text("1:45 PM")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(.gray)
-                    }.padding(10)
+                    }
+                    .padding(10)
                 }
-                    .padding(.leading,10)
-                }
-                    
-                    Divider()
+                .padding(.leading, 10)
+                
+            }
+            
+            
+            Divider()
                 .padding(.vertical, 18)
-            Text ("SUGGESTED RIDES")
-              .font (. subheadline)
-              .fontWeight(.semibold)
-              .padding()
-              .foregroundColor(.gray)
-              .frame(maxWidth: .infinity, alignment: .leading)
-          ScrollView( .horizontal) {
-              HStack (spacing: 12) {
-                  ForEach(RideType.allCases)
-                  { type in
-                      VStack(alignment:
-                              .leading) {
-                                  Image (type.imageName)
-                                      .resizable()
-                                      .scaledToFit()
-                                  VStack(spacing: 5) {
-                                      Text(type.description)
-                                          .font(.system(size: 14, weight: .semibold))
-                                      .foregroundColor(.gray)
-                                  
-                                  Text("50DT")
-                                      .font(.system(size: 14, weight: .semibold))
-                                  }
-                                  .padding(8)
-                              }
-                              .frame(width: 120,height: 140)
-                              .background(Color( type == selectedRideType ?
-                                .systemGreen:.systemGroupedBackground))
-                              .cornerRadius(10)
-                              .onTapGesture {
-                                  withAnimation(.spring()){
-                                      selectedRideType = type
-                                  }
-                                  
-                              }
-                  }
-              }
-          }
-          .padding(.horizontal)
-                    
+            
+            Text("MEANS OF TRANSPORT")
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .padding()
+                .foregroundColor(.gray)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            ScrollView(.horizontal) {
+                HStack(spacing: 12) {
+                    ForEach(RideType.allCases) { type in
+                        VStack(alignment: .leading) {
+                            Image(type.imageName)
+                                .resizable()
+                                .scaledToFit()
+                            VStack(spacing: 5) {
+                                Text(type.description)
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .foregroundColor(.gray)
+                            }
+                            .padding(8)
+                        }
+                        .frame(width: 120, height: 140)
+                        .background(Color(type == selectedRideType ? .systemGreen : .systemGroupedBackground))
+                        .cornerRadius(10)
+                        .onTapGesture {
+                            withAnimation(.spring()) {
+                                selectedRideType = type
+                            }
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal)
             
             Button {
+                isConfirmationPresented = true
+                
             } label: {
-                Text("Confirm Ride")
-                    .fontWeight(.bold)
-                    .frame(width: UIScreen.main.bounds.width -
-                           32, height: 50)
-                    .background(.green)
-                    .cornerRadius(10)
-                    .foregroundColor(.white)
-            }
-            
+                    Text("Confirm")
+                        .fontWeight(.bold)
+                        .frame(width: UIScreen.main.bounds.width - 32, height: 50)
+                        .background(.green)
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
                 }
-        .padding(.bottom, 25)
-        .background(.white)
-        .cornerRadius(20)
-            }
+                .padding(.bottom, 5)
+            
+                .background(Color.white.opacity(0.8))
+                .cornerRadius(20)
+                .fullScreenCover(isPresented: $isConfirmationPresented) {
+                    DriverDetailsView(driverInfo: DriverModel(
+                        id: 1,
+                        name: "Driver Driver",
+                        location: "Tunis, Tunisie",
+                        imageName: "driver_image",
+                        description: "blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblabla",
+                        reviews: "123",
+                        rideType: selectedRideType
+                    ))
+                    
+                }
+                .edgesIgnoringSafeArea(.all)
+               
+              
+            
+                
+            
         }
+        .background(Color.white.opacity(0.8))
+        .offset(y: isSwipedDown ? UIScreen.main.bounds.height : offset)
+            .animation(.spring())
+        
+        .gesture(
+            DragGesture()
+                .onChanged { value in
+                    if value.translation.height > 0 {
+                        offset = value.translation.height
+                    }
+                }
+                .onEnded { value in
+                    withAnimation(.spring()) {
+                        if offset > 100 {
+                            isSwipedDown = true
+                        } else {
+                            offset = 0
+                        }
+                    }
+                }
+        )
+       
+    }
     
-
     struct RideRequestView_Previews: PreviewProvider {
         static var previews: some View {
             RideRequestView()
         }
     }
-
+}

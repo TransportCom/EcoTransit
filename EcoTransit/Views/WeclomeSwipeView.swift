@@ -18,11 +18,12 @@ struct  WelcomeSwipeView: View {
                 }
             }
             .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode: .interactive))
-            
+              
+        
 
            
-        }.navigationBarBackButtonHidden(true)
+        }.navigationBarBackButtonHidden(false)
+            .indexViewStyle(.page(backgroundDisplayMode: .never))
     }
 }
   
