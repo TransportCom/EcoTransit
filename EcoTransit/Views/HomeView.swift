@@ -7,6 +7,7 @@ import SwiftUI
 struct HomeView: View {
     @State private var showLocationSearchView = false
     @State private var mapState = MapViewState.noInput
+ 
     
     var body: some View {
        
@@ -14,10 +15,10 @@ struct HomeView: View {
             ZStack (alignment: .top) {
               MapViewRepresentable(mapState: $mapState)
                     .ignoresSafeArea()
+               
                     
                 if mapState == .searchingForLocation
                 {
-                        
                  
                             LocationSearchView(mapState: $mapState)
                     .edgesIgnoringSafeArea(.all)
@@ -35,32 +36,22 @@ struct HomeView: View {
                                 mapState = .searchingForLocation
                             }}
                 }
-                 
+              
                         MapViewActionButton(mapState: $mapState)
                         .padding(.top, 23)
                         
                         
-                       
                     }
                 
              if mapState == .loctionSelected{
-              
                 
                     RideRequestView()
                         .transition(.move(edge: .bottom))
                         .padding(.bottom ,10)
-            
                 
             }
             } .edgesIgnoringSafeArea(.bottom)
             .navigationBarBackButtonHidden(true)
-            
-            
-            
-            
-           
-            
-            
             
             
         }

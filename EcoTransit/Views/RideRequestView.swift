@@ -13,7 +13,7 @@ struct RideRequestView: View {
     @State private var offset: CGFloat = 0
     @State private var isSwipedDown: Bool = false
     @State private var isConfirmationPresented: Bool = false
-
+    @State var showDriverList: Bool = false
 
     var body: some View {
         VStack {
@@ -107,22 +107,29 @@ struct RideRequestView: View {
             }
             .padding(.horizontal)
             
+           
             Button {
-                isConfirmationPresented = true
-                
-            } label: {
+                showDriverList.toggle()
+                    } label: {
                     Text("Confirm")
-                        .fontWeight(.bold)
-                        .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                        .background(.green)
-                        .cornerRadius(10)
-                        .foregroundColor(.white)
-                }
-                .padding(.bottom, 5)
-            
-                .background(Color.white.opacity(0.8))
-                .cornerRadius(20)
-                .fullScreenCover(isPresented: $isConfirmationPresented) {
+                                   .fontWeight(.bold)
+                                   .frame(width: UIScreen.main.bounds.width - 32, height: 50)
+                                   .background(.green)
+                                   .cornerRadius(10)
+                                   .foregroundColor(.white)
+                           }
+                           .padding(.bottom, 5)
+                           .background(Color.white.opacity(0.8))
+                           .cornerRadius(20)
+                           .sheet(isPresented: $showDriverList) {
+                               DriverListView(drivers: [
+                                   DriverModel(id: 1, name: "imen test", location: "location 1, testestets", imageName: "driver_profile_image", description: "Driver description", reviews: "5", rideType: .taxi)
+                                   // Add more drivers as needed
+                               ])
+                           }
+                           .edgesIgnoringSafeArea(.all)
+                   
+               /* .fullScreenCover(isPresented: $isConfirmationPresented) {
                     DriverDetailsView(driverInfo: DriverModel(
                         id: 1,
                         name: "Driver Driver",
@@ -133,9 +140,10 @@ struct RideRequestView: View {
                         rideType: selectedRideType
                     ))
                     
-                }
-                .edgesIgnoringSafeArea(.all)
-               
+                }*/
+           
+        
+            
               
             
                 

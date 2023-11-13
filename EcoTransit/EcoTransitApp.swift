@@ -4,26 +4,28 @@
 //
 //  Created by imba on 4/11/2023.
 //
-
-/*import SwiftUI
+import SwiftUI
+import Firebase
 
 @main
 struct EcoTransitApp: App {
     @StateObject var locationViewModel = LocationSearchViewModel()
     let persistenceController = PersistenceController.shared
 
+    init() {
+        FirebaseApp.configure()
+    }
+
     var body: some Scene {
         WindowGroup {
-            /* WelcomeSwipeView()
-                      .environmentObject(locationViewModel)*/
-            
+            WelcomeSwipeView()
+                .environmentObject(locationViewModel)
         }
     }
 }
-*/
 
-import SwiftUI
-import Firebase
+
+
 
 /*class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -34,7 +36,7 @@ content_copy
     return true
   }
 }
-*/
+
 
 @main
 struct EcoTransitApp: App {
@@ -49,3 +51,4 @@ struct EcoTransitApp: App {
         }
     }
 }
+*/

@@ -18,6 +18,8 @@
 		8D78B60B2AFD3F62001EBF97 /* DriverDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */; };
 		8D90B04F2AFBE9BB00DDB461 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */; };
 		8D90B0512AFC310300DDB461 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90B0502AFC310300DDB461 /* RideType.swift */; };
+		8D9A7D9B2B014EE400420531 /* DriverResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9A7D9A2B014EE400420531 /* DriverResultCell.swift */; };
+		8D9A7D9D2B01514B00420531 /* DriverListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9A7D9C2B01514B00420531 /* DriverListView.swift */; };
 		8DAAF4FF2B00430000CB3012 /* ContentChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */; };
 		8DAAF5012B0043F200CB3012 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5002B0043F200CB3012 /* MessagesManager.swift */; };
 		8DAAF5042B00448C00CB3012 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5032B00448C00CB3012 /* MessageBubble.swift */; };
@@ -82,6 +84,8 @@
 		8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsView.swift; sourceTree = "<group>"; };
 		8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		8D90B0502AFC310300DDB461 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
+		8D9A7D9A2B014EE400420531 /* DriverResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverResultCell.swift; sourceTree = "<group>"; };
+		8D9A7D9C2B01514B00420531 /* DriverListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListView.swift; sourceTree = "<group>"; };
 		8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChatView.swift; sourceTree = "<group>"; };
 		8DAAF5002B0043F200CB3012 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		8DAAF5032B00448C00CB3012 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 				8DCAF8CF2AF717C500912616 /* MapViewActionButton.swift */,
 				8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */,
 				8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */,
+				8D9A7D9A2B014EE400420531 /* DriverResultCell.swift */,
+				8D9A7D9C2B01514B00420531 /* DriverListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,7 +287,6 @@
 				08E3665DAE4F714A60164495 /* Pods-EcoTransitTests.debug.xcconfig */,
 				81F8210DF3D3EC1CC60E7937 /* Pods-EcoTransitTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -541,6 +546,7 @@
 				8DCAF8C42AF6F78D00912616 /* LocationManager.swift in Sources */,
 				8DCAF8952AF6ECE200912616 /* Content1View.swift in Sources */,
 				8D018FA02AFAFE9300F6DE45 /* RideRequestView.swift in Sources */,
+				8D9A7D9B2B014EE400420531 /* DriverResultCell.swift in Sources */,
 				8D78B60B2AFD3F62001EBF97 /* DriverDetailsView.swift in Sources */,
 				8D78B6052AFD3D2E001EBF97 /* DriverModel.swift in Sources */,
 				8DAAF50D2B005A4B00CB3012 /* Message.swift in Sources */,
@@ -558,6 +564,7 @@
 				8D3C8F4B2AF7C0760033B6C6 /* Location.swift in Sources */,
 				8DAAF4FF2B00430000CB3012 /* ContentChatView.swift in Sources */,
 				8DCAF8D62AF71F3700912616 /* LocationSearchResultCell.swift in Sources */,
+				8D9A7D9D2B01514B00420531 /* DriverListView.swift in Sources */,
 				8DAAF5162B006B1A00CB3012 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,19 +6,23 @@
 //
 
 import SwiftUI
+
 struct DriverDetailsView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var isChatViewPresented = false
     var driverInfo: DriverModel
   
     var body: some View {
         NavigationView {
             ZStack {
-                VStack(alignment:.leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: 20) {
                     Spacer()
-                    Image("")
-                        .resizable().cornerRadius(32)
+                    Image("driver_image") // Replace with the actual image name or URL
+                        .resizable()
+                        .cornerRadius(32)
                         .aspectRatio(contentMode: .fill)
-                        .frame(height: 200).padding(.top,20)
+                        .frame(height: 200)
+                        .padding(.top, 20)
                   
                     HStack {
                         Text(driverInfo.name)
@@ -38,16 +42,18 @@ struct DriverDetailsView: View {
                         Image(systemName: "star.fill")
                             .foregroundColor(.yellow)
                             .foregroundColor(.gray)
-                            .padding(.bottom,1)
-                        Text(driverInfo.reviews).font(.system(size: 16)).foregroundColor(.gray)
+                            .padding(.bottom, 1)
+                        Text(driverInfo.reviews)
+                            .font(.system(size: 16))
+                            .foregroundColor(.gray)
                      
                             .frame(width: 70, height: 70)
                             .cornerRadius(15)
                         Spacer()
                         Image(systemName: "star")
-                               .resizable()
-                               .frame(width: 25, height: 25)
-                               .foregroundColor(Color.gray)
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(Color.gray)
                     }
                     
                     Text(driverInfo.location)
@@ -57,25 +63,29 @@ struct DriverDetailsView: View {
                     Text(driverInfo.description)
                         Spacer()
 
-                    HStack{
+                    HStack {
                         Button("Chat") {
                             // Action to start a chat
+                            isChatViewPresented.toggle()
                         }
                         .padding()
                         .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(15)
+                        .sheet(isPresented: $isChatViewPresented) {
+                            ContentChatView() 
+                        }
                         
                         Spacer()
                         
-                    Spacer()
+                        Color("355E3B")
                             .frame(width: 70, height: 70)
                             .cornerRadius(15)
                         
                         Image(systemName: "heart")
-                               .resizable()
-                               .frame(width: 25, height: 25)
-                               .foregroundColor(Color.gray)
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(Color.gray)
                     }
                 }
                 .padding(.horizontal, 15)
@@ -86,13 +96,12 @@ struct DriverDetailsView: View {
             .padding(.top, -10)
             .navigationBarTitle("driver info", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: Button(action: {
+           /* .navigationBarItems(leading: Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "arrow.left")
                     .foregroundColor(Color.green)
-            })
-            
+            })*/
         }
     }
 }

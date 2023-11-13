@@ -31,6 +31,7 @@ var body: some View {
         .fill(Color.white)
     .shadow(color: .green, radius: 5))
     }.padding(.trailing, 33)
+    
 
 }
     
