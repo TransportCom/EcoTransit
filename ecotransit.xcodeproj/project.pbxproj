@@ -8,43 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		1B701AD32AF656B200253DE1 /* ecotransitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AD22AF656B200253DE1 /* ecotransitApp.swift */; };
-		1B701AD52AF656B200253DE1 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AD42AF656B200253DE1 /* MainTabbedView.swift */; };
 		1B701AD72AF656B600253DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B701AD62AF656B600253DE1 /* Assets.xcassets */; };
 		1B701ADA2AF656B600253DE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B701AD92AF656B600253DE1 /* Preview Assets.xcassets */; };
 		1B701ADC2AF656B600253DE1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701ADB2AF656B600253DE1 /* Persistence.swift */; };
 		1B701ADF2AF656B600253DE1 /* ecotransit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B701ADD2AF656B600253DE1 /* ecotransit.xcdatamodeld */; };
 		1B701AEC2AF65A1000253DE1 /* LoginInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AEB2AF65A1000253DE1 /* LoginInView.swift */; };
-		1B701AEE2AF65A3000253DE1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AED2AF65A3000253DE1 /* SignInView.swift */; };
-		1B701AF02AF65AEF00253DE1 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AEF2AF65AEF00253DE1 /* CustomViews.swift */; };
-		1BAF32522AF7B765007A01D5 /* chooseRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAF32512AF7B765007A01D5 /* chooseRoleView.swift */; };
-		1BDDA8E82AF9691200836CD8 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8E72AF9691200836CD8 /* ForgotPasswordView.swift */; };
-		1BDDA8EA2AFB86C900836CD8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8E92AFB86C900836CD8 /* HomeView.swift */; };
 		1BDDA8EC2AFB86DF00836CD8 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8EB2AFB86DF00836CD8 /* FavoriteView.swift */; };
 		1BDDA8EE2AFB87F900836CD8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8ED2AFB87F900836CD8 /* ProfileView.swift */; };
-		1BDDA8F02AFB891300836CD8 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8EF2AFB891200836CD8 /* SideMenu.swift */; };
-		1BDDA8F22AFB8A0C00836CD8 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8F12AFB8A0C00836CD8 /* SideMenuView.swift */; };
-		1BDDA8F42AFB8A8600836CD8 /* SideMenuRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8F32AFB8A8600836CD8 /* SideMenuRowType.swift */; };
+		1BF41BF22B03D6D10051277A /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41BF12B03D6D10051277A /* OnBoardingPage.swift */; };
+		1BF41BF42B03DAC10051277A /* LoginPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41BF32B03DAC10051277A /* LoginPageModel.swift */; };
+		1BF41BF62B03DAE80051277A /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41BF52B03DAE80051277A /* CustomCorners.swift */; };
+		1BF41BFB2B03DB270051277A /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BF41BFA2B03DB270051277A /* Raleway-Bold.ttf */; };
+		1BF41BFD2B03DB330051277A /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BF41BFC2B03DB330051277A /* Raleway-Regular.ttf */; };
+		1BF41BFF2B03DB370051277A /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BF41BFE2B03DB370051277A /* Raleway-SemiBold.ttf */; };
+		1BF41C022B03EB5B0051277A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41C012B03EB5B0051277A /* ContentView.swift */; };
+		1BF41C042B03F4C80051277A /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41C032B03F4C80051277A /* CustomViews.swift */; };
+		1BF41C062B04F4E90051277A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41C052B04F4E90051277A /* MainView.swift */; };
+		1BF41C0B2B04F5960051277A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41C0A2B04F5960051277A /* Home.swift */; };
+		1BF41C0D2B04F7030051277A /* Liked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41C0C2B04F7030051277A /* Liked.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B701ACF2AF656B200253DE1 /* ecotransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecotransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B701AD22AF656B200253DE1 /* ecotransitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecotransitApp.swift; sourceTree = "<group>"; };
-		1B701AD42AF656B200253DE1 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 		1B701AD62AF656B600253DE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B701AD92AF656B600253DE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B701ADB2AF656B600253DE1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		1B701ADE2AF656B600253DE1 /* ecotransit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ecotransit.xcdatamodel; sourceTree = "<group>"; };
 		1B701AEB2AF65A1000253DE1 /* LoginInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInView.swift; sourceTree = "<group>"; };
-		1B701AED2AF65A3000253DE1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		1B701AEF2AF65AEF00253DE1 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
-		1BAF32512AF7B765007A01D5 /* chooseRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chooseRoleView.swift; sourceTree = "<group>"; };
-		1BDDA8E72AF9691200836CD8 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
-		1BDDA8E92AFB86C900836CD8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1BDDA8EB2AFB86DF00836CD8 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		1BDDA8ED2AFB87F900836CD8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		1BDDA8EF2AFB891200836CD8 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
-		1BDDA8F12AFB8A0C00836CD8 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
-		1BDDA8F32AFB8A8600836CD8 /* SideMenuRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowType.swift; sourceTree = "<group>"; };
+		1BF41BF12B03D6D10051277A /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
+		1BF41BF32B03DAC10051277A /* LoginPageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageModel.swift; sourceTree = "<group>"; };
+		1BF41BF52B03DAE80051277A /* CustomCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		1BF41BFA2B03DB270051277A /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		1BF41BFC2B03DB330051277A /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		1BF41BFE2B03DB370051277A /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		1BF41C012B03EB5B0051277A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1BF41C032B03F4C80051277A /* CustomViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		1BF41C052B04F4E90051277A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1BF41C0A2B04F5960051277A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1BF41C0C2B04F7030051277A /* Liked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liked.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,15 +81,16 @@
 		1B701AD12AF656B200253DE1 /* ecotransit */ = {
 			isa = PBXGroup;
 			children = (
+				1BF41BF72B03DB010051277A /* Fonts */,
+				1B701AD82AF656B600253DE1 /* Preview Content */,
 				1BDDA8F52AFB97EE00836CD8 /* models */,
-				1B701AEA2AF6593100253DE1 /* SupportingViews */,
-				1B701AE52AF658D600253DE1 /* views */,
+				1B701AEA2AF6593100253DE1 /* ViewModels */,
+				1B701AE52AF658D600253DE1 /* Views */,
 				1B701AD22AF656B200253DE1 /* ecotransitApp.swift */,
-				1B701AD42AF656B200253DE1 /* MainTabbedView.swift */,
+				1BF41C012B03EB5B0051277A /* ContentView.swift */,
 				1B701AD62AF656B600253DE1 /* Assets.xcassets */,
 				1B701ADB2AF656B600253DE1 /* Persistence.swift */,
 				1B701ADD2AF656B600253DE1 /* ecotransit.xcdatamodeld */,
-				1B701AD82AF656B600253DE1 /* Preview Content */,
 			);
 			path = ecotransit;
 			sourceTree = "<group>";
@@ -98,36 +103,53 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1B701AE52AF658D600253DE1 /* views */ = {
+		1B701AE52AF658D600253DE1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1BF41C092B04F5770051277A /* tabview */,
+				1BF41BF52B03DAE80051277A /* CustomCorners.swift */,
 				1B701AEB2AF65A1000253DE1 /* LoginInView.swift */,
-				1B701AED2AF65A3000253DE1 /* SignInView.swift */,
-				1BAF32512AF7B765007A01D5 /* chooseRoleView.swift */,
-				1BDDA8E72AF9691200836CD8 /* ForgotPasswordView.swift */,
-				1BDDA8E92AFB86C900836CD8 /* HomeView.swift */,
 				1BDDA8EB2AFB86DF00836CD8 /* FavoriteView.swift */,
-				1BDDA8ED2AFB87F900836CD8 /* ProfileView.swift */,
-				1BDDA8F12AFB8A0C00836CD8 /* SideMenuView.swift */,
+				1BF41BF12B03D6D10051277A /* OnBoardingPage.swift */,
+				1BF41C052B04F4E90051277A /* MainView.swift */,
 			);
-			path = views;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		1B701AEA2AF6593100253DE1 /* SupportingViews */ = {
+		1B701AEA2AF6593100253DE1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1B701AEF2AF65AEF00253DE1 /* CustomViews.swift */,
+				1BF41C032B03F4C80051277A /* CustomViews.swift */,
 			);
-			path = SupportingViews;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		1BDDA8F52AFB97EE00836CD8 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				1BDDA8F32AFB8A8600836CD8 /* SideMenuRowType.swift */,
-				1BDDA8EF2AFB891200836CD8 /* SideMenu.swift */,
+				1BF41BF32B03DAC10051277A /* LoginPageModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		1BF41BF72B03DB010051277A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1BF41BFE2B03DB370051277A /* Raleway-SemiBold.ttf */,
+				1BF41BFA2B03DB270051277A /* Raleway-Bold.ttf */,
+				1BF41BFC2B03DB330051277A /* Raleway-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1BF41C092B04F5770051277A /* tabview */ = {
+			isa = PBXGroup;
+			children = (
+				1BF41C0A2B04F5960051277A /* Home.swift */,
+				1BF41C0C2B04F7030051277A /* Liked.swift */,
+				1BDDA8ED2AFB87F900836CD8 /* ProfileView.swift */,
+			);
+			path = tabview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,8 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF41BFD2B03DB330051277A /* Raleway-Regular.ttf in Resources */,
 				1B701ADA2AF656B600253DE1 /* Preview Assets.xcassets in Resources */,
+				1BF41BFF2B03DB370051277A /* Raleway-SemiBold.ttf in Resources */,
 				1B701AD72AF656B600253DE1 /* Assets.xcassets in Resources */,
+				1BF41BFB2B03DB270051277A /* Raleway-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,21 +225,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BDDA8F42AFB8A8600836CD8 /* SideMenuRowType.swift in Sources */,
-				1B701AEE2AF65A3000253DE1 /* SignInView.swift in Sources */,
 				1B701AEC2AF65A1000253DE1 /* LoginInView.swift in Sources */,
-				1B701AF02AF65AEF00253DE1 /* CustomViews.swift in Sources */,
-				1BDDA8F02AFB891300836CD8 /* SideMenu.swift in Sources */,
-				1BDDA8EA2AFB86C900836CD8 /* HomeView.swift in Sources */,
+				1BF41C062B04F4E90051277A /* MainView.swift in Sources */,
 				1BDDA8EE2AFB87F900836CD8 /* ProfileView.swift in Sources */,
+				1BF41C0D2B04F7030051277A /* Liked.swift in Sources */,
+				1BF41C022B03EB5B0051277A /* ContentView.swift in Sources */,
+				1BF41BF62B03DAE80051277A /* CustomCorners.swift in Sources */,
 				1B701ADC2AF656B600253DE1 /* Persistence.swift in Sources */,
+				1BF41C0B2B04F5960051277A /* Home.swift in Sources */,
 				1BDDA8EC2AFB86DF00836CD8 /* FavoriteView.swift in Sources */,
-				1BDDA8F22AFB8A0C00836CD8 /* SideMenuView.swift in Sources */,
-				1B701AD52AF656B200253DE1 /* MainTabbedView.swift in Sources */,
-				1BAF32522AF7B765007A01D5 /* chooseRoleView.swift in Sources */,
+				1BF41BF22B03D6D10051277A /* OnBoardingPage.swift in Sources */,
+				1BF41BF42B03DAC10051277A /* LoginPageModel.swift in Sources */,
 				1B701AD32AF656B200253DE1 /* ecotransitApp.swift in Sources */,
-				1BDDA8E82AF9691200836CD8 /* ForgotPasswordView.swift in Sources */,
 				1B701ADF2AF656B600253DE1 /* ecotransit.xcdatamodeld in Sources */,
+				1BF41C042B03F4C80051277A /* CustomViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +374,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ecotransit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "using face id to log in";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -378,6 +403,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ecotransit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "using face id to log in";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
