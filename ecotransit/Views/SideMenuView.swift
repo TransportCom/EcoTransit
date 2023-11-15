@@ -98,6 +98,7 @@ struct SideMenuView: View {
                     Spacer()
                 }
             }
+            .navigationBarHidden(true)
         }
         .frame(height: 50)
         .background(

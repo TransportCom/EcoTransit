@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  FavoriteView.swift
 //  ecotransit
 //
 //  Created by Mohamed Achi on 8/11/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct FavoriteView: View {
     
     @Binding var presentSideMenu: Bool
     
@@ -25,9 +25,13 @@ struct HomeView: View {
             }
             
             Spacer()
-            Text("Home View")
+            Text("Favorite View")
             Spacer()
-        }
+        }      .navigationBarHidden(true)
         .padding(.horizontal, 24)
     }
+}
+
+#Preview {
+    LoginInView()
 }

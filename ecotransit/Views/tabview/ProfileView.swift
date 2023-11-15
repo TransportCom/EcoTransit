@@ -16,8 +16,6 @@ struct profile: Identifiable {
 
 struct ProfileView: View {
     
-    @Binding var presentSideMenu: Bool
-    
     @State private var username: String = ""
     
     @State private var profileList: [profile] = [
@@ -32,28 +30,43 @@ struct ProfileView: View {
         ScrollView {
             VStack {
                 HStack {
-                    Button{
-                        presentSideMenu.toggle()
-                    } label: {
-                        Image("logo")
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                    }
+                 
                     Text("Eco-Transit")
                         .font(.title)
                 }
-                .textFieldStyle(CustomTextFieldStyle())
                 .cornerRadius(10)
                 .padding()
-                
-                HStack {
-                    Text("Quel type de compte ?")
-                        .font(.system(size: 22, weight: .semibold))
-                    Spacer()
+                VStack(alignment: .center){
+                    HStack{
+                        Spacer()
+                        Image("profile-image")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 200)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 150)
+                                    .stroke(.green.opacity(0.5), lineWidth: 5)
+                            )
+                            .cornerRadius(150)
+                        Spacer()
+                    }
                     
+                    Text("Muhammad Achi")
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundColor(.black)
+                    
+                    Text("IOS Developer")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundColor(.black.opacity(0.5))
                 }
-                .padding(.trailing, 20)
-                
+                ScrollView(.horizontal, showsIndicators: false) {
+                                  HStack(spacing: 50) {
+                                      ForEach(profileList) { profile in
+                                          optCard(profile: profile)
+                                      }
+                                  }
+                              }
+
                 ForEach(profileList) { profile in
                     Recently(profile: profile)
                 }
@@ -71,20 +84,21 @@ struct optCard: View {
         ZStack {
             Image(profile.imageName)
                 .resizable()
-                .frame(width: 300, height: 300)
+                .frame(width: 50, height: 50)
                 .cornerRadius(10)
 
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 50) {
                 Spacer()
                 Text(profile.title)
-                    .font(.headline)
+                    .font(.system(size: 35))
                     .foregroundColor(.black)
-                    .cornerRadius(120)
+                    .cornerRadius(10)
 
             }
             .padding()
         }
-        .frame(width: 100, height: 300)
+        .navigationBarHidden(true)
+        .frame(width: 200, height: 300)
     }
 }
 
@@ -133,5 +147,5 @@ struct CustomTextprint: TextFieldStyle {
 }
 
 #Preview {
-ProfileView(presentSideMenu: .constant(false))
+ProfileView()
 }

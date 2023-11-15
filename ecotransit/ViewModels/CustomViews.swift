@@ -156,5 +156,6 @@ struct topbarview: View {
                 .padding(.horizontal, 20)
             
         }
-    }
+        
+    } 
 }

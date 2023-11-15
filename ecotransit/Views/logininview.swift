@@ -98,13 +98,16 @@ struct LoginInView: View {
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                             .font(.system(size: 18))
-                        
-                        Button(action: {}, label: {
+                        NavigationLink {
+                            // destination view to navigation to
+                            SignInView()
+                        } label: {
+
                             Text("Sign up")
                                 .font(.system(size: 18))
                                 .foregroundColor(Color("background2"))
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        })
+                            }
                     }
                     .frame(height: 63)
                     .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
@@ -112,7 +115,7 @@ struct LoginInView: View {
                     .ignoresSafeArea()
                 }
             }
-            .edgesIgnoringSafeArea(.bottom)
+            
         }
         .navigationBarHidden(true)
     }}
