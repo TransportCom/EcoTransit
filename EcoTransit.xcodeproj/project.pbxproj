@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		852D2D9B070AAA313AC6159F /* Pods_EcoTransitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952572592EC1C3DA0A2317EA /* Pods_EcoTransitTests.framework */; };
 		8D018FA02AFAFE9300F6DE45 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D018F9F2AFAFE9300F6DE45 /* RideRequestView.swift */; };
+		8D0D00A22B059349000DB93D /* StationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0D00A12B059349000DB93D /* StationsModel.swift */; };
+		8D0D00A82B05B161000DB93D /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0D00A72B05B161000DB93D /* TripView.swift */; };
+		8D0D00AB2B05DF4D000DB93D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0D00AA2B05DF4D000DB93D /* Network.swift */; };
+		8D0D00AD2B05DF76000DB93D /* StationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0D00AC2B05DF76000DB93D /* StationsService.swift */; };
+		8D0D00B12B05E681000DB93D /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0D00B02B05E681000DB93D /* StationViewModel.swift */; };
 		8D302EEB2B02B2E400B8D7D7 /* Pods_EcoTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5EDBCBE33F33041E3A471E /* Pods_EcoTransit.framework */; };
 		8D302EEC2B02B2E400B8D7D7 /* Pods_EcoTransit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5EDBCBE33F33041E3A471E /* Pods_EcoTransit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8D302EF12B02BD1000B8D7D7 /* DriverHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D302EF02B02BD1000B8D7D7 /* DriverHomeView.swift */; };
@@ -56,6 +61,8 @@
 		8DFD9BA82B041DCD000957CC /* ContentChatDriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD9BA72B041DCD000957CC /* ContentChatDriverView.swift */; };
 		8DFD9BAA2B0422EF000957CC /* MapViewDriverActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD9BA92B0422EF000957CC /* MapViewDriverActionButton.swift */; };
 		8DFD9BAC2B044958000957CC /* RequestAcceptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD9BAB2B044958000957CC /* RequestAcceptView.swift */; };
+		8DFD9BAF2B046CB4000957CC /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD9BAE2B046CB4000957CC /* StationsView.swift */; };
+		8DFD9BB32B0481F3000957CC /* DriverPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD9BB22B0481F3000957CC /* DriverPinView.swift */; };
 		D2FE12A73C529D3E6708E44D /* Pods_EcoTransit_EcoTransitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB8E63FDFD3DAF524990803 /* Pods_EcoTransit_EcoTransitUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +105,11 @@
 		4EFF4A668F52A43C786EF803 /* Pods-EcoTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoTransit.debug.xcconfig"; path = "Target Support Files/Pods-EcoTransit/Pods-EcoTransit.debug.xcconfig"; sourceTree = "<group>"; };
 		81F8210DF3D3EC1CC60E7937 /* Pods-EcoTransitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoTransitTests.release.xcconfig"; path = "Target Support Files/Pods-EcoTransitTests/Pods-EcoTransitTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D018F9F2AFAFE9300F6DE45 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
+		8D0D00A12B059349000DB93D /* StationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsModel.swift; sourceTree = "<group>"; };
+		8D0D00A72B05B161000DB93D /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		8D0D00AA2B05DF4D000DB93D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		8D0D00AC2B05DF76000DB93D /* StationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsService.swift; sourceTree = "<group>"; };
+		8D0D00B02B05E681000DB93D /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		8D302EF02B02BD1000B8D7D7 /* DriverHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverHomeView.swift; sourceTree = "<group>"; };
 		8D3C8F4A2AF7C0760033B6C6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8D3C8F4C2AF7C0870033B6C6 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
@@ -144,6 +156,8 @@
 		8DFD9BA72B041DCD000957CC /* ContentChatDriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChatDriverView.swift; sourceTree = "<group>"; };
 		8DFD9BA92B0422EF000957CC /* MapViewDriverActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDriverActionButton.swift; sourceTree = "<group>"; };
 		8DFD9BAB2B044958000957CC /* RequestAcceptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAcceptView.swift; sourceTree = "<group>"; };
+		8DFD9BAE2B046CB4000957CC /* StationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
+		8DFD9BB22B0481F3000957CC /* DriverPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverPinView.swift; sourceTree = "<group>"; };
 		952572592EC1C3DA0A2317EA /* Pods_EcoTransitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoTransitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5EDBCBE33F33041E3A471E /* Pods_EcoTransit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoTransit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB8E63FDFD3DAF524990803 /* Pods_EcoTransit_EcoTransitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoTransit_EcoTransitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +193,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D0D00A92B05DF2C000DB93D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D0D00AA2B05DF4D000DB93D /* Network.swift */,
+				8D0D00AC2B05DF76000DB93D /* StationsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8D302EEE2B02B76300B8D7D7 /* driver */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +248,7 @@
 				8D78B6042AFD3D2E001EBF97 /* DriverModel.swift */,
 				8DAAF50C2B005A4B00CB3012 /* Message.swift */,
 				8DFD9BA12B041433000957CC /* ClientModel.swift */,
+				8D0D00A12B059349000DB93D /* StationsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +288,7 @@
 		8DCAF8912AF6ECE200912616 /* EcoTransit */ = {
 			isa = PBXGroup;
 			children = (
+				8D0D00A92B05DF2C000DB93D /* Services */,
 				8DAAF50E2B005DC000CB3012 /* GoogleService-Info.plist */,
 				8DCAF8D22AF717E300912616 /* ViewModel */,
 				8DCAF8D12AF717CD00912616 /* Views */,
@@ -306,6 +331,7 @@
 		8DCAF8D12AF717CD00912616 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8DFD9BAD2B046C9F000957CC /* Stations */,
 				8D302EEF2B02B77E00B8D7D7 /* client */,
 				8D302EEE2B02B76300B8D7D7 /* driver */,
 			);
@@ -318,8 +344,19 @@
 				8DCAF8C32AF6F78D00912616 /* LocationManager.swift */,
 				8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */,
 				8DAAF5002B0043F200CB3012 /* MessagesManager.swift */,
+				8D0D00B02B05E681000DB93D /* StationViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8DFD9BAD2B046C9F000957CC /* Stations */ = {
+			isa = PBXGroup;
+			children = (
+				8DFD9BB22B0481F3000957CC /* DriverPinView.swift */,
+				8DFD9BAE2B046CB4000957CC /* StationsView.swift */,
+				8D0D00A72B05B161000DB93D /* TripView.swift */,
+			);
+			path = Stations;
 			sourceTree = "<group>";
 		};
 		A1B36CA7C77029668D3F9026 /* Frameworks */ = {
@@ -592,10 +629,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0D00B12B05E681000DB93D /* StationViewModel.swift in Sources */,
 				8DCAF8C22AF6F3D300912616 /* MapViewRepresentable.swift in Sources */,
 				8DAAF5082B0044CF00CB3012 /* TitleRow.swift in Sources */,
 				8DCAF8D02AF717C500912616 /* MapViewActionButton.swift in Sources */,
 				8DFD9BA42B04161C000957CC /* ClientResultCell.swift in Sources */,
+				8DFD9BB32B0481F3000957CC /* DriverPinView.swift in Sources */,
 				8D3C8F4F2AF7C0990033B6C6 /* TrackYourRide.swift in Sources */,
 				8D6E31D62AF99B76008C4AC6 /* LocationSearchViewModel.swift in Sources */,
 				8DFD9BA02B0413E4000957CC /* ClientListView.swift in Sources */,
@@ -614,13 +653,18 @@
 				8D90B0512AFC310300DDB461 /* RideType.swift in Sources */,
 				8D90B04F2AFBE9BB00DDB461 /* MapViewState.swift in Sources */,
 				8DFD9BA82B041DCD000957CC /* ContentChatDriverView.swift in Sources */,
+				8D0D00A22B059349000DB93D /* StationsModel.swift in Sources */,
 				8DCAF8D42AF71A2600912616 /* LocationSearchView.swift in Sources */,
 				8DAAF5042B00448C00CB3012 /* MessageBubble.swift in Sources */,
 				8DCAF8932AF6ECE200912616 /* EcoTransitApp.swift in Sources */,
+				8D0D00A82B05B161000DB93D /* TripView.swift in Sources */,
 				8DCAF8CE2AF7159F00912616 /* HomeView.swift in Sources */,
 				8DFD9BA22B041433000957CC /* ClientModel.swift in Sources */,
 				8DAAF5062B0044B300CB3012 /* MessageField.swift in Sources */,
 				8DCAF89F2AF6ECE400912616 /* EcoTransit.xcdatamodeld in Sources */,
+				8D0D00AB2B05DF4D000DB93D /* Network.swift in Sources */,
+				8DFD9BAF2B046CB4000957CC /* StationsView.swift in Sources */,
+				8D0D00AD2B05DF76000DB93D /* StationsService.swift in Sources */,
 				8DFD9BAA2B0422EF000957CC /* MapViewDriverActionButton.swift in Sources */,
 				8DAAF5012B0043F200CB3012 /* MessagesManager.swift in Sources */,
 				8D629AD22AF90DE300B6F08E /* WeclomeSwipeView.swift in Sources */,
