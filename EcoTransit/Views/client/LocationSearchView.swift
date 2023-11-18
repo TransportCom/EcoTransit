@@ -10,7 +10,7 @@ import SwiftUI
 struct LocationSearchView: View {
     @State private var startLocationText = ""
     @Binding var mapState: MapViewState
-    @EnvironmentObject var viewModel : LocationSearchViewModel
+   @EnvironmentObject var viewModel : LocationSearchViewModel
     var body: some View {
         VStack
         {
@@ -22,9 +22,11 @@ struct LocationSearchView: View {
                     Rectangle()
                         .fill(Color (.systemGray3))
                         .frame (width: 1, height: 24)
+                       
                     Rectangle()
                         .fill(.black)
                         .frame (width: 6, height: 6)
+                       
                     
                 }
                 
@@ -35,13 +37,14 @@ struct LocationSearchView: View {
                  .background (Color(
                  .systemGroupedBackground))
                  .padding(.trailing)
-                     
+                 .cornerRadius(16)
                      TextField("Where to", text:
                                 $viewModel.queryFragment)
                      .frame (height: 32)
                      .background (Color(
                      .systemGray4))
                      .padding(.trailing)
+                     .cornerRadius(16)
                  }
             
             }.padding(.horizontal)

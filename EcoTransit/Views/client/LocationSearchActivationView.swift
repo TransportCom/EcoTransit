@@ -29,9 +29,10 @@ var body: some View {
     .background(
     Rectangle()
         .fill(Color.white)
+        .cornerRadius(18)
     .shadow(color: .green, radius: 5))
     }.padding(.trailing, 33)
-    
+       
 
 }
     

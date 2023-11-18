@@ -1,13 +1,13 @@
 //
-//  TrackYourRide.swift
+//  Swipe2View.swift
 //  EcoTransit
 //
-//  Created by imba on 5/11/2023.
+//  Created by imba on 17/11/2023.
 //
 
 import SwiftUI
 
-struct TrackYourRide: View {
+struct Swipe2View: View {
     @State private var currentPage: CGFloat = 3.0 / 3.0
     @State private var navigateToLocation = false
     var body: some View {
@@ -19,26 +19,28 @@ struct TrackYourRide: View {
                 VStack {
                     Spacer().frame(height: 150)
                     
-                    Image("map")
+                    Image("swipedriver")
                         .resizable()
-                        .clipShape(Circle())
+                   
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 300, height: 250)
+                        .frame(width: 250, height: 200)
                         .alignmentGuide(.top) { Dimensions in Dimensions[.top] }
                     
-                    Spacer()
-                    Text("Track your ride")
+                    
+                    Spacer().frame(height: 50)
+                    Text("    Accept the request")
                         .font(.system(size: 30, weight: .medium, design: .default))
                         .frame(width: 200, height: 100)
                         .foregroundColor(.green)
+                     
                     
-                    Text("Huge drivers network helps you find comfortable,safe and cheap rode ")
+                    Text("Go for the client you choose ")
                         .font(.system(size: 22, weight: .medium, design: .default))
                     
                     Spacer()
                     
                     VStack {
-                        NavigationLink(destination: HomeView(), isActive: $navigateToLocation) {
+                        NavigationLink(destination: DriverHomeView(), isActive: $navigateToLocation) {
                             
                         }
                         
@@ -74,9 +76,9 @@ struct TrackYourRide: View {
     
     
     
-    struct TrackYourRide_Previews: PreviewProvider {
+    struct Swipe2View_Previews: PreviewProvider {
         static var previews: some View {
-            TrackYourRide()
+        Swipe2View()
         }
     }
     

@@ -2,8 +2,9 @@ import SwiftUI
 
 struct  WelcomeSwipeView: View {
     private let views: [AnyView] = [
-        AnyView(Driver()),
+       
         AnyView(Location()),
+        AnyView(Driver()),
         AnyView(TrackYourRide())
     ]
 

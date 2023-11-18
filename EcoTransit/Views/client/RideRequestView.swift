@@ -77,7 +77,7 @@ struct RideRequestView: View {
                 .font(.subheadline)
                 .fontWeight(.semibold)
                 .padding()
-                .foregroundColor(.gray)
+                .foregroundColor(.black)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             ScrollView(.horizontal) {
@@ -90,7 +90,7 @@ struct RideRequestView: View {
                             VStack(spacing: 5) {
                                 Text(type.description)
                                     .font(.system(size: 14, weight: .semibold))
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(.black)
                             }
                             .padding(8)
                         }

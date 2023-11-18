@@ -8,7 +8,8 @@
 import SwiftUI
 struct DriverHomeView: View {
     @State private var showLocationSearchView = false
-    @State private var mapState = MapViewState.noInput
+    @State private var mapState = DriverState.Available
+    @State private var mapState1 = MapViewState.noInput
     @State private var isOpen = false
     @State private var isClientListViewPresented = false
     @State var showClientList: Bool = false
@@ -18,16 +19,17 @@ struct DriverHomeView: View {
         
         
             ZStack{
-                MapViewRepresentable(mapState: $mapState)
+                MapViewRepresentable(mapState : $mapState1)
                 
                 
                 
                 VStack{
 
                     MapViewDriverActionButton(mapState: $mapState)
+                       
                     
                         
-                    Spacer()
+                    Spacer().frame(height: 630)
                     Button {
                         showClientList.toggle()
                     }label: {
@@ -53,7 +55,7 @@ struct DriverHomeView: View {
                             ])
                         }
                     
-                    if mapState == .loctionSelected{
+                    if mapState1 == .loctionSelected{
                         
                         RideRequestView()
                             .transition(.move(edge: .bottom))
@@ -63,7 +65,8 @@ struct DriverHomeView: View {
                     
                 }
                 
-        }
+        }.navigationBarBackButtonHidden(true)
+            .ignoresSafeArea()
         
         
     }

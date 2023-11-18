@@ -1,4 +1,10 @@
 //
+//  Swipe1View.swift
+//  EcoTransit
+//
+//  Created by imba on 17/11/2023.
+//
+//
 //  Driver.swift
 //  EcoTransit
 //
@@ -7,7 +13,7 @@
 
 import SwiftUI
 
-struct Driver: View {
+struct Swipe1View: View {
     @State private var currentPage: CGFloat = 3.0 / 3.0
     @State private var navigateToLocation = false
     var body: some View {
@@ -16,22 +22,21 @@ struct Driver: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Spacer().frame(height: 180)
-                
-                Image("Driver")
+                Spacer().frame(height: 160)
+                Image("map")
                     .resizable()
-               
+                    .clipShape(Circle())
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 250, height: 200)
+                    .frame(width: 300, height: 250)
                     .alignmentGuide(.top) { Dimensions in Dimensions[.top] }
-                
+               
                 Spacer()
-                Text("Confirm your ride")
+                Text("Get requests from   the closest clients")
                     .font(.system(size: 30, weight: .medium, design: .default))
-                    .frame(width: 200, height: 100)
+                    .frame(width: 300, height: 100)
                     .foregroundColor(.green)
                 
-                Text("Huge drivers network helps you find comfortable,safe and cheap rides ")
+                Text("Huge clients network helps you find comfortable, safe and cheap rides ")
                     .font(.system(size: 22, weight: .medium, design: .default))
                 
                 Spacer()
@@ -53,9 +58,9 @@ struct Driver: View {
     
     
     
-    struct Driver_Previews: PreviewProvider {
+    struct Swipe1View_Previews: PreviewProvider {
         static var previews: some View {
-            Driver()
+            Swipe1View()
         }
     }
     

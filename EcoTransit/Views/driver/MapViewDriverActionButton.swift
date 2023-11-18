@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct MapViewDriverActionButton: View {
-    @Binding var mapState: MapViewState
+    @Binding var mapState: DriverState
     @EnvironmentObject var viewModel: LocationSearchViewModel
     @State var showClientList: Bool = false
     var body: some View {
         Button {
             withAnimation(.spring()) {
-            actionForState(mapState)
+                actionForState(DriverState.Available)
            
         }
            
         } label: {
-            Image (systemName: imageNameForState(mapState))
+            Image (systemName: imageNameForState(DriverState.Available))
                 .font (.title2)
                 .foregroundColor(.black)
                 .padding()
@@ -29,28 +29,28 @@ struct MapViewDriverActionButton: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         }
-    func actionForState(_ state: MapViewState)
+    func actionForState(_ state: DriverState)
     {
         switch state {
-        case.noInput:
-            print("NO INPUT")
-        case.searchingForLocation:
-            mapState = .noInput
-        case.loctionSelected:
+        case.Available:
+            print("Driver is available")
+       
+        case.NotAvailable:
             
-                print("clear mapview")
-                mapState = .noInput
-                viewModel.selectedLocationCoordinate = nil
+                print("driver is not available")
+                mapState = .NotAvailable
+               // viewModel.selectedLocationCoordinate = nil
             
         }
         }
     
-    func imageNameForState(_ state: MapViewState) ->String
+    func imageNameForState(_ state: DriverState) ->String
     {
         switch state {
-        case.noInput:
-           return "plus"
-        case.searchingForLocation , .loctionSelected:
+        case.Available:
+           return "checkmark"
+            
+        case.NotAvailable:
             return "arrow.left"
         }
         }
@@ -62,6 +62,6 @@ struct MapViewDriverActionButton: View {
 
 struct MapViewDriverActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        MapViewDriverActionButton(mapState: .constant(.noInput))
+        MapViewDriverActionButton(mapState: .constant(.Available))
     }
 }

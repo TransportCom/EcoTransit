@@ -15,7 +15,7 @@ struct Location: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Spacer().frame(height: 50)
+                Spacer().frame(height: 150)
                 
                 Image("taxi")
                     .resizable()
@@ -30,7 +30,7 @@ struct Location: View {
                     .frame(width: 200, height: 100)
                     .foregroundColor(.green)
                 
-                Text("Huge drivers network helps you find comfortable,safe and cheap rode ")
+                Text("Huge drivers network helps you find comfortable,safe and cheap rides ")
                     .font(.system(size: 22, weight: .medium, design: .default))
                 
                 Spacer()

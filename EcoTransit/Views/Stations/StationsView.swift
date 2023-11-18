@@ -101,21 +101,8 @@ struct StationInfoView: View {
                             .foregroundColor (Color(.systemGray5))
                             .frame(width: 48, height: 6)
                             .padding(5)
-                        VStack {
-                            Circle()
-                                .fill(Color(.systemGray3))
-                                .frame(width: 8, height: 6)
-                            
-                            Rectangle()
-                                .fill(Color(.systemGray3))
-                                .frame(width: 1, height: 5)
-                            
-                            Rectangle()
-                                .fill(.black)
-                                .frame(width: 6, height: 6)
-                            
-                        }
-                       Spacer()
+                        
+                      
                         Text(station.title) .font(.custom("arial", size: 24)) .padding(.top,10)
                             .bold()
                        

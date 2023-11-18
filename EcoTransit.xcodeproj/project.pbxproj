@@ -28,6 +28,10 @@
 		8D90B0512AFC310300DDB461 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90B0502AFC310300DDB461 /* RideType.swift */; };
 		8D9A7D9B2B014EE400420531 /* DriverResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9A7D9A2B014EE400420531 /* DriverResultCell.swift */; };
 		8D9A7D9D2B01514B00420531 /* DriverListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9A7D9C2B01514B00420531 /* DriverListView.swift */; };
+		8D9AB1F52B0821760070C8BB /* Swipe1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AB1F42B0821760070C8BB /* Swipe1View.swift */; };
+		8D9AB1F72B0821810070C8BB /* Swipe2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AB1F62B0821810070C8BB /* Swipe2View.swift */; };
+		8D9AB1F92B08219B0070C8BB /* DriverWelcomSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AB1F82B08219B0070C8BB /* DriverWelcomSwipeView.swift */; };
+		8D9AB1FB2B0839670070C8BB /* DriverState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AB1FA2B0839670070C8BB /* DriverState.swift */; };
 		8DAAF4FF2B00430000CB3012 /* ContentChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */; };
 		8DAAF5012B0043F200CB3012 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5002B0043F200CB3012 /* MessagesManager.swift */; };
 		8DAAF5042B00448C00CB3012 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAF5032B00448C00CB3012 /* MessageBubble.swift */; };
@@ -122,6 +126,10 @@
 		8D90B0502AFC310300DDB461 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		8D9A7D9A2B014EE400420531 /* DriverResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverResultCell.swift; sourceTree = "<group>"; };
 		8D9A7D9C2B01514B00420531 /* DriverListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListView.swift; sourceTree = "<group>"; };
+		8D9AB1F42B0821760070C8BB /* Swipe1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe1View.swift; sourceTree = "<group>"; };
+		8D9AB1F62B0821810070C8BB /* Swipe2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe2View.swift; sourceTree = "<group>"; };
+		8D9AB1F82B08219B0070C8BB /* DriverWelcomSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverWelcomSwipeView.swift; sourceTree = "<group>"; };
+		8D9AB1FA2B0839670070C8BB /* DriverState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverState.swift; sourceTree = "<group>"; };
 		8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChatView.swift; sourceTree = "<group>"; };
 		8DAAF5002B0043F200CB3012 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		8DAAF5032B00448C00CB3012 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
@@ -212,6 +220,9 @@
 				8DFD9BA72B041DCD000957CC /* ContentChatDriverView.swift */,
 				8DFD9BA92B0422EF000957CC /* MapViewDriverActionButton.swift */,
 				8DFD9BAB2B044958000957CC /* RequestAcceptView.swift */,
+				8D9AB1F42B0821760070C8BB /* Swipe1View.swift */,
+				8D9AB1F62B0821810070C8BB /* Swipe2View.swift */,
+				8D9AB1F82B08219B0070C8BB /* DriverWelcomSwipeView.swift */,
 			);
 			path = driver;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 				8DAAF50C2B005A4B00CB3012 /* Message.swift */,
 				8DFD9BA12B041433000957CC /* ClientModel.swift */,
 				8D0D00A12B059349000DB93D /* StationsModel.swift */,
+				8D9AB1FA2B0839670070C8BB /* DriverState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -641,11 +653,13 @@
 				8DCAF89C2AF6ECE400912616 /* Persistence.swift in Sources */,
 				8D3C8F4D2AF7C0870033B6C6 /* Driver.swift in Sources */,
 				8DCAF8C42AF6F78D00912616 /* LocationManager.swift in Sources */,
+				8D9AB1F92B08219B0070C8BB /* DriverWelcomSwipeView.swift in Sources */,
 				8DFD9BAC2B044958000957CC /* RequestAcceptView.swift in Sources */,
 				8DCAF8952AF6ECE200912616 /* Content1View.swift in Sources */,
 				8D018FA02AFAFE9300F6DE45 /* RideRequestView.swift in Sources */,
 				8D9A7D9B2B014EE400420531 /* DriverResultCell.swift in Sources */,
 				8D78B60B2AFD3F62001EBF97 /* DriverDetailsView.swift in Sources */,
+				8D9AB1F52B0821760070C8BB /* Swipe1View.swift in Sources */,
 				8D78B6052AFD3D2E001EBF97 /* DriverModel.swift in Sources */,
 				8DAAF50D2B005A4B00CB3012 /* Message.swift in Sources */,
 				8DFD9BA62B0416A2000957CC /* ClientDetailsView.swift in Sources */,
@@ -660,6 +674,7 @@
 				8D0D00A82B05B161000DB93D /* TripView.swift in Sources */,
 				8DCAF8CE2AF7159F00912616 /* HomeView.swift in Sources */,
 				8DFD9BA22B041433000957CC /* ClientModel.swift in Sources */,
+				8D9AB1FB2B0839670070C8BB /* DriverState.swift in Sources */,
 				8DAAF5062B0044B300CB3012 /* MessageField.swift in Sources */,
 				8DCAF89F2AF6ECE400912616 /* EcoTransit.xcdatamodeld in Sources */,
 				8D0D00AB2B05DF4D000DB93D /* Network.swift in Sources */,
@@ -673,6 +688,7 @@
 				8DAAF4FF2B00430000CB3012 /* ContentChatView.swift in Sources */,
 				8DCAF8D62AF71F3700912616 /* LocationSearchResultCell.swift in Sources */,
 				8D9A7D9D2B01514B00420531 /* DriverListView.swift in Sources */,
+				8D9AB1F72B0821810070C8BB /* Swipe2View.swift in Sources */,
 				8DAAF5162B006B1A00CB3012 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

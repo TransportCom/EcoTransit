@@ -18,7 +18,8 @@ struct EcoTransitApp: App {
 
     var body: some Scene {
         WindowGroup {
-          StationsView(stationViewModel: StationViewModel())
+          DriverWelcomeSwipeView()
+                //StationsView(stationViewModel: StationViewModel())
                 .environmentObject(locationViewModel)
         }
     }
