@@ -15,6 +15,10 @@ class StationViewModel: ObservableObject {
     @Published var isLoading = true
     
     @Published var message: String = ""
+    
+    @Published var fromStation = StationsModel(title:"INITIAL",coordinates: Cordinates(lan: 0, lat: 0))
+    
+    @Published var toStation = StationsModel(title:"INITIAL",coordinates: Cordinates(lan: 0, lat: 0))
 
     
     
@@ -36,4 +40,30 @@ class StationViewModel: ObservableObject {
             }
         }
     }
+    
+    func fetchIterinary(id: String, fromLocation: Cordinates, toLocation: Cordinates) {
+        Stationservice().fetchIterinary(id:id, fromLocation:fromLocation, toLocation:toLocation ){ result in
+            switch result {
+                
+            case.success(let data):
+                print("DATA: \(data)")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0){
+                    self.isLoading = false
+                    self.fromStation = data?.fromStation ?? StationsModel(title: "noResponse", coordinates: Cordinates(lan: 0, lat: 0))
+                    self.toStation = data?.toStation ?? StationsModel(title: "noResponse", coordinates: Cordinates(lan: 0, lat: 0))
+                    print("FROM###### \(self.fromStation)")
+                    print("TO###### \(self.toStation)")
+                    self.stations = [
+                        .init(title: self.fromStation.title, coordinates: self.fromStation.coordinates),
+                        .init(title: self.toStation.title, coordinates: self.toStation.coordinates),
+                    ]
+                }
+                
+            case.failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    
 }

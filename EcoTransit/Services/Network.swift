@@ -6,4 +6,5 @@ struct Network {
     
     
     static let fetchStationUrl = BASE_URL + "/station"
+    static let fetchIterinaryUrl = BASE_URL + "/iterinary"
 }

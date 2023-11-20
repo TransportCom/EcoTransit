@@ -42,6 +42,11 @@ struct fetchStationsResponse : Decodable  {
     let statusCode : Int
 }
 
+struct fetchIterinaryResponse : Decodable {
+    let fromStation : StationsModel
+    let toStation : StationsModel
+}
+
 // Example function to assign trips to stations
 func assignTripsToStations() {
     var station1 = StationsModel(title: "Station A", coordinates: Cordinates(lan: 37.7749, lat: -122.4194) )

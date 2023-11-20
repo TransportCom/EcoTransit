@@ -39,8 +39,12 @@ struct MapViewActionButton: View {
                 print("clear mapview")
                 mapState = .noInput
                 viewModel.selectedLocationCoordinate = nil
-            
+        case.vehiculeSelected:
+                print("clear mapview")
+                mapState = .noInput
+                viewModel.selectedLocationCoordinate = nil
         }
+    
         }
     
     func imageNameForState(_ state: MapViewState) ->String
@@ -48,7 +52,7 @@ struct MapViewActionButton: View {
         switch state {
         case.noInput:
            return "line.3.horizontal"
-        case.searchingForLocation , .loctionSelected:
+        case.searchingForLocation , .loctionSelected, .vehiculeSelected:
             return "arrow.left"
         }
         }

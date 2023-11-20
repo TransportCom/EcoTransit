@@ -10,5 +10,6 @@ enum MapViewState {
     case noInput
     case searchingForLocation
     case loctionSelected
+    case vehiculeSelected
 
 }

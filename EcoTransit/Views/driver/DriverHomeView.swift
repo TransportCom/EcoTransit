@@ -19,7 +19,7 @@ struct DriverHomeView: View {
         
         
             ZStack{
-                MapViewRepresentable(mapState : $mapState1)
+                /*MapViewRepresentable(mapState : $mapState1)*/
                 
                 
                 
@@ -57,9 +57,9 @@ struct DriverHomeView: View {
                     
                     if mapState1 == .loctionSelected{
                         
-                        RideRequestView()
+                        /*RideRequestView(stationViewModel: StationViewModel())
                             .transition(.move(edge: .bottom))
-                            .padding(.bottom ,10)
+                            .padding(.bottom ,10)*/	
                         
                     }
                     

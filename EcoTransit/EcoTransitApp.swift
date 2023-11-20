@@ -6,8 +6,8 @@
 //
 import SwiftUI
 import Firebase
-
-@main
+import MapKit
+	@main
 struct EcoTransitApp: App {
     @StateObject var locationViewModel = LocationSearchViewModel()
     let persistenceController = PersistenceController.shared
@@ -18,9 +18,12 @@ struct EcoTransitApp: App {
 
     var body: some Scene {
         WindowGroup {
-          DriverWelcomeSwipeView()
-                //StationsView(stationViewModel: StationViewModel())
-                .environmentObject(locationViewModel)
+         // DriverWelcomeSwipeView()
+          // StationsView(stationViewModel: StationViewModel())
+            //StationsView(stationViewModel: StationViewModel())
+            HomeView(stationViewModel: StationViewModel())
+     
+            .environmentObject(locationViewModel)
         }
     }
 }

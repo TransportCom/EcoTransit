@@ -38,7 +38,7 @@ struct TrackYourRide: View {
                     Spacer()
                     
                     VStack {
-                        NavigationLink(destination: HomeView(), isActive: $navigateToLocation) {
+                        NavigationLink(destination: HomeView(stationViewModel: StationViewModel()), isActive: $navigateToLocation) {
                             
                         }
                         

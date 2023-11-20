@@ -13,7 +13,10 @@ struct RideRequestView: View {
     @State private var offset: CGFloat = 0
     @State private var isSwipedDown: Bool = false
     @State private var isConfirmationPresented: Bool = false
-    @State var showDriverList: Bool = false
+    @StateObject var stationViewModel : StationViewModel
+    let selectedCordinates : Cordinates
+    @Binding var mapState: MapViewState
+
 
     var body: some View {
         VStack {
@@ -100,6 +103,8 @@ struct RideRequestView: View {
                         .onTapGesture {
                             withAnimation(.spring()) {
                                 selectedRideType = type
+                                stationViewModel.fetchStations()
+                                
                             }
                         }
                     }
@@ -109,7 +114,10 @@ struct RideRequestView: View {
             
            
             Button {
-                showDriverList.toggle()
+                mapState = .vehiculeSelected
+       
+                print(mapState)
+        
                     } label: {
                     Text("Confirm")
                                    .fontWeight(.bold)
@@ -121,33 +129,8 @@ struct RideRequestView: View {
                            .padding(.bottom, 5)
                            .background(Color.white.opacity(0.8))
                            .cornerRadius(20)
-                           .sheet(isPresented: $showDriverList) {
-                               DriverListView(drivers: [
-                                   DriverModel(id: 1, name: "imen test", location: "location 1, testestets", imageName: "driver_profile_image", description: "Driver description", reviews: "5", rideType: .taxi)
-                                   // Add more drivers as needed
-                               ])
-                           }
                            .edgesIgnoringSafeArea(.all)
-                   
-               /* .fullScreenCover(isPresented: $isConfirmationPresented) {
-                    DriverDetailsView(driverInfo: DriverModel(
-                        id: 1,
-                        name: "Driver Driver",
-                        location: "Tunis, Tunisie",
-                        imageName: "driver_image",
-                        description: "blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblabla",
-                        reviews: "123",
-                        rideType: selectedRideType
-                    ))
-                    
-                }*/
-           
-        
-            
-              
-            
-                
-            
+                           
         }
         .background(Color.white.opacity(0.8))
         .offset(y: isSwipedDown ? UIScreen.main.bounds.height : offset)
@@ -173,9 +156,10 @@ struct RideRequestView: View {
        
     }
     
-    struct RideRequestView_Previews: PreviewProvider {
+    /*struct RideRequestView_Previews: PreviewProvider {
+        @StateObject var stationViewModel : StationViewModel
         static var previews: some View {
-            RideRequestView()
+            RideRequestView(stationViewModel: StationViewModel())
         }
-    }
+    }*/
 }
