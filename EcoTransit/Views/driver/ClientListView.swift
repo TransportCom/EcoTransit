@@ -10,19 +10,21 @@ struct ClientListView: View {
     @State  var clients: [ClientModel]
     @State private var isRequestAccepted = false
     @State private var selectedClient: ClientModel?
-
+    @Binding  var driverState: DriverState
+    @Binding  var mapState: MapViewState
     var body: some View {
         VStack {
             NavigationView {
                 List {
                     ForEach(clients, id: \.id) { client in
                         NavigationLink(
-                            destination: RequestAcceptView(client: client),
+                            destination: RequestAcceptView(client: client, driverState: $driverState, mapState: $mapState),
                             label: {
                                 ClientResultCell(client: client)
                                     .contextMenu {
                                         Button(action: {
                                             acceptRequest(client: client)
+                                            
                                         }) {
                                             Label("Accept", systemImage: "checkmark.circle.fill")
                                         }
@@ -44,7 +46,7 @@ struct ClientListView: View {
             }
             
             NavigationLink(
-                destination: RequestAcceptView(client: selectedClient ?? ClientModel(id: 0, name: "", location: "", imageName: "", description: "")),
+                destination: RequestAcceptView(client: selectedClient ?? ClientModel(id: 0, name: "", location: "", coordinates: Cordinates(lan: -122, lat: 37), imageName: "", description: ""), driverState: $driverState, mapState: $mapState),
                 isActive: $isRequestAccepted,
                 label: { EmptyView() }
             )
@@ -67,14 +69,4 @@ struct ClientListView: View {
     }
 }
 
-struct ClientListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ClientListView(clients: [
-            ClientModel(id: 1, name: "client1", location: "location 1, testestets", imageName: "client_profile_image", description: "Client description"),
-            ClientModel(id: 2, name: "client2", location: "location 1, testestets", imageName: "client_profile_image", description: "Client description"),
-            ClientModel(id: 3, name: "clien21", location: "location 1, testestets", imageName: "client_profile_image", description: "Client description"),
-            ClientModel(id: 4, name: "client4", location: "location 1, testestets", imageName: "client_profile_image", description: "Client description")
-        ])
-    }
-}
 

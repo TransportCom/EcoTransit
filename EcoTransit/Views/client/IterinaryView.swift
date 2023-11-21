@@ -15,10 +15,8 @@ struct IterinaryView: View {
     @State private var isSwipedDown: Bool = false
     @State private var isConfirmationPresented: Bool = false
     @State var showDriverList: Bool = false
-    var fromStation = StationsModel(title:"INITIAL",coordinates: Cordinates(lan: 0, lat: 0))
-    
-    var toStation = StationsModel(title:"INITIAL",coordinates: Cordinates(lan: 0, lat: 0))
-    var stationViewModel : StationViewModel
+    @State var fromStation : StationsModel
+    @State var toStation : StationsModel
     var body: some View {
         VStack {
             
@@ -70,6 +68,10 @@ struct IterinaryView: View {
                     .padding(10)
                 }
                 .padding(.leading, 10)
+                /*.onAppear(perform: {
+                    DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: {
+                    })
+                })*/
                 
             }
            
@@ -100,11 +102,5 @@ struct IterinaryView: View {
                 }
         )
        
-    }
-    
-    struct IterinaryView_Previews: PreviewProvider {
-        static var previews: some View {
-            IterinaryView(stationViewModel: StationViewModel())
-        }
     }
 }

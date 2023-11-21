@@ -16,7 +16,8 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     
     @Published var results = [MKLocalSearchCompletion]()
     @Published var selectedLocationCoordinate: CLLocationCoordinate2D?
-    
+    @Published var selectedLocationTitle: String?
+
     private let searchCompleter = MKLocalSearchCompleter()
     var queryFragment: String = ""
     {
@@ -51,6 +52,13 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     let search = MKLocalSearch(request: searchRequest)
     search.start (completionHandler: completion)
         
+    }
+    func setLocation(location: CLLocationCoordinate2D) {
+        self.selectedLocationCoordinate = location
+    }
+    
+    func setTitle(title: String) {
+        self.selectedLocationTitle = title
     }
 }
 

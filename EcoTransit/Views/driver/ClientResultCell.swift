@@ -41,6 +41,7 @@ struct ClientResultCell_Previews: PreviewProvider {
             id: 1,
             name: "imen test",
             location: "location 1, testestets",
+            coordinates: Cordinates(lan: 0, lat: 0),
             imageName: "client_profile_image",
             description: "Client description"
         ))

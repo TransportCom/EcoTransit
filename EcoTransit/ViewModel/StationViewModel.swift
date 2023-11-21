@@ -53,10 +53,7 @@ class StationViewModel: ObservableObject {
                     self.toStation = data?.toStation ?? StationsModel(title: "noResponse", coordinates: Cordinates(lan: 0, lat: 0))
                     print("FROM###### \(self.fromStation)")
                     print("TO###### \(self.toStation)")
-                    self.stations = [
-                        .init(title: self.fromStation.title, coordinates: self.fromStation.coordinates),
-                        .init(title: self.toStation.title, coordinates: self.toStation.coordinates),
-                    ]
+                    self.stations = [self.fromStation, self.toStation]
                 }
                 
             case.failure(let error):

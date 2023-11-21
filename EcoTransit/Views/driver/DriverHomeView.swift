@@ -8,8 +8,8 @@
 import SwiftUI
 struct DriverHomeView: View {
     @State private var showLocationSearchView = false
-    @State private var mapState = DriverState.Available
-    @State private var mapState1 = MapViewState.noInput
+    @State private var driverState = DriverState.Available
+    @State private var mapState = MapViewState.noInput
     @State private var isOpen = false
     @State private var isClientListViewPresented = false
     @State var showClientList: Bool = false
@@ -19,19 +19,20 @@ struct DriverHomeView: View {
         
         
             ZStack{
-                /*MapViewRepresentable(mapState : $mapState1)*/
-                
+                MapViewRepDriver(mapState : $mapState)
+                    .ignoresSafeArea()
                 
                 
                 VStack{
 
-                    MapViewDriverActionButton(mapState: $mapState)
+                    MapViewDriverActionButton(driverState: $driverState,mapState: $mapState)
                        
                     
                         
                     Spacer().frame(height: 630)
                     Button {
                         showClientList.toggle()
+                     
                     }label: {
                         ZStack(alignment:.bottom ){
                             Text("GO")
@@ -48,20 +49,21 @@ struct DriverHomeView: View {
                     
                         .sheet(isPresented: $showClientList) {
                             ClientListView(clients: [
-                                ClientModel(id: 1, name: "client1", location: "location 1, testestets", imageName: "client_profile_image", description: "Client description"),
-                                ClientModel(id: 1, name: "client1", location: "location 1, testestets", imageName: "client_profile_image", description: "Client description"),
-                                ClientModel(id: 1, name: "client1", location: "location 1, testestets", imageName: "client_profile_image", description: "Client description"),
-                                ClientModel(id: 1, name: "client1", location: "location 1, testestets", imageName: "client_profile_image", description: "Client description")
-                            ])
+                                ClientModel(id: 1, name: "client1", location: "location 1, testestets", coordinates: Cordinates(lan: -122.1, lat: 37.1), imageName: "client_profile_image", description: "Client description"),
+                                ClientModel(id: 1, name: "client1", location: "location 1, testestets", coordinates: Cordinates(lan: -122.2, lat: 37.2), imageName: "client_profile_image", description: "Client description"),
+                                ClientModel(id: 1, name: "client1", location: "location 1, testestets", coordinates: Cordinates(lan: -122.3, lat: 37.3), imageName: "client_profile_image", description: "Client description"),
+                                ClientModel(id: 1, name: "client1", location: "location 1, testestets", coordinates: Cordinates(lan: -122.4, lat: 37.4), imageName: "client_profile_image", description: "Client description")
+                            ], driverState: $driverState, mapState: $mapState )
                         }
                     
-                    if mapState1 == .loctionSelected{
+                    /* if mapState == .NotAvailable
+                    {
                         
-                        /*RideRequestView(stationViewModel: StationViewModel())
+                        RideRequestView(stationViewModel: StationViewModel())
                             .transition(.move(edge: .bottom))
-                            .padding(.bottom ,10)*/	
+                            .padding(.bottom ,10)
                         
-                    }
+                    }*/
                     
                 }
                 
@@ -74,7 +76,7 @@ struct DriverHomeView: View {
         }
     
 
-
+                     
 
 
 struct DriverHomeView_Previews: PreviewProvider {
@@ -82,4 +84,5 @@ struct DriverHomeView_Previews: PreviewProvider {
     DriverHomeView()
     }
 }
+
 

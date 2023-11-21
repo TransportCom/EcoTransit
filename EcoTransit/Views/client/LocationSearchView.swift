@@ -62,6 +62,7 @@ struct LocationSearchView: View {
                             withAnimation(.spring()){
                                 viewModel
                                     .selectLocation(result )
+                                viewModel.setTitle(title: result.title)
                                 mapState = .loctionSelected
                             }
                         }

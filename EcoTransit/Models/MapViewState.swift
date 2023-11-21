@@ -11,5 +11,6 @@ enum MapViewState {
     case searchingForLocation
     case loctionSelected
     case vehiculeSelected
+    case iterinaryDisplayed
 
 }

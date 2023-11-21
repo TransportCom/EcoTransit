@@ -43,6 +43,10 @@ struct MapViewActionButton: View {
                 print("clear mapview")
                 mapState = .noInput
                 viewModel.selectedLocationCoordinate = nil
+        case .iterinaryDisplayed:
+            print("clear mapview")
+            mapState = .noInput
+            viewModel.selectedLocationCoordinate = nil
         }
     
         }
@@ -52,7 +56,7 @@ struct MapViewActionButton: View {
         switch state {
         case.noInput:
            return "line.3.horizontal"
-        case.searchingForLocation , .loctionSelected, .vehiculeSelected:
+        case.searchingForLocation , .loctionSelected, .vehiculeSelected, .iterinaryDisplayed:
             return "arrow.left"
         }
         }

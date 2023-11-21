@@ -14,6 +14,8 @@ struct HomeView: View {
     @State private var mapState = MapViewState.noInput
     @StateObject private var dataModel = DataModel()
     var stationViewModel : StationViewModel
+    @State var fromStation : StationsModel = StationsModel(title: "Station1", coordinates: Cordinates(lan: 10, lat: 36.5))
+    @State var toStation : StationsModel = StationsModel(title: "Station2", coordinates: Cordinates(lan: 10.2, lat: 36.7))
     @State private var visibleRect = MKMapRect(x: 145_000_000, y: 111_000_000, width: 15_000_000, height: 25_000_000)
     let items: [StationsModel] =  [
         
@@ -26,7 +28,7 @@ struct HomeView: View {
         
         ZStack (alignment: .bottom){
             ZStack (alignment: .top) {
-                MapViewRepresentable(mapState: $mapState, dataModel:dataModel, stationViewModel: stationViewModel )
+                MapViewRepresentable(mapState: $mapState, dataModel:dataModel, stationViewModel: stationViewModel, fromStation: fromStation, toStation: toStation )
                     .ignoresSafeArea()
                 
                 
@@ -55,7 +57,7 @@ struct HomeView: View {
             }
             
             if mapState == .loctionSelected{
-                RideRequestView(stationViewModel: StationViewModel(), selectedCordinates: dataModel.data, mapState: $mapState)
+                RideRequestView(stationViewModel: stationViewModel, selectedCordinates: dataModel.data, mapState: $mapState)
                     .transition(.move(edge: .bottom))
                     .padding(.bottom ,10)
                     .ignoresSafeArea()
@@ -102,9 +104,9 @@ struct HomeView: View {
                     
                     }
             }
-            if mapState == .vehiculeSelected
+            if mapState == .iterinaryDisplayed
             {
-                IterinaryView(stationViewModel: StationViewModel())
+                IterinaryView(fromStation: fromStation, toStation: toStation)
                     .transition(.move(edge: .bottom))
                     .padding(.bottom ,15)
             }
@@ -124,11 +126,7 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-    HomeView(stationViewModel: StationViewModel())
-    }
-}
+
 
 struct StationInfoView: View {
 let station: StationsModel

@@ -14,9 +14,10 @@ struct RideRequestView: View {
     @State private var isSwipedDown: Bool = false
     @State private var isConfirmationPresented: Bool = false
     @StateObject var stationViewModel : StationViewModel
+    @EnvironmentObject var locationViewModel: LocationSearchViewModel
     let selectedCordinates : Cordinates
     @Binding var mapState: MapViewState
-
+    
 
     var body: some View {
         VStack {
@@ -47,7 +48,7 @@ struct RideRequestView: View {
                 
                 VStack(alignment: .leading, spacing: 24) {
                     HStack {
-                        Text("Current location")
+                        Text("Current Location")
                             .font(.system(size: 16))
                             .foregroundColor(.gray)
                         Spacer()
@@ -58,7 +59,7 @@ struct RideRequestView: View {
                     .padding(10)
                     
                     HStack {
-                        Text("De Anza College")
+                        Text(locationViewModel.selectedLocationTitle ?? "")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.green)
                         Spacer()
@@ -104,7 +105,6 @@ struct RideRequestView: View {
                             withAnimation(.spring()) {
                                 selectedRideType = type
                                 stationViewModel.fetchStations()
-                                
                             }
                         }
                     }

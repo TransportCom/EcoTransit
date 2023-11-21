@@ -101,6 +101,7 @@ struct ClientDetailsView_Previews: PreviewProvider {
             id: 1,
             name: "Client Client",
             location: "Tunis, Tunisie",
+            coordinates: Cordinates(lan: 0, lat: 0),
             imageName: "client_image",
             description: "blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblabla"
         ))

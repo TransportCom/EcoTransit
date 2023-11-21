@@ -18,7 +18,7 @@ struct EcoTransitApp: App {
 
     var body: some Scene {
         WindowGroup {
-         // DriverWelcomeSwipeView()
+         //DriverWelcomeSwipeView()
           // StationsView(stationViewModel: StationViewModel())
             //StationsView(stationViewModel: StationViewModel())
             HomeView(stationViewModel: StationViewModel())

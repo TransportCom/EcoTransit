@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct RequestAcceptView: View {
     let client: ClientModel // Assuming you have a ClientModel to get client details
-
+    @State private var isChatViewPresented = false
+    @EnvironmentObject var viewModel: LocationSearchViewModel
+    @Binding  var driverState: DriverState
+    @Binding  var mapState: MapViewState
     var body: some View {
         VStack {
             Image(systemName: "checkmark.circle.fill")
@@ -29,16 +33,25 @@ struct RequestAcceptView: View {
             Text("Location: \(client.location)")
                 .font(.body)
                 .padding()
-
-            // Additional details or actions can be added here
+           Spacer()
+            Button("Chat") {
+                // Action to start a chat
+                isChatViewPresented.toggle()
+            }
+            .padding()
+            .background(Color.green)
+            .foregroundColor(.white)
+            .cornerRadius(15)
+            .sheet(isPresented: $isChatViewPresented) {
+                ContentChatView()
+            }
+    
         }
         .padding()
-    }
-}
-
-struct RequestAcceptView_Previews: PreviewProvider {
-    static var previews: some View {
-        let sampleClient = ClientModel(id: 1, name: "Client Name", location: "Client Location", imageName: "client_profile_image", description: "Client description")
-        return RequestAcceptView(client: sampleClient)
+        .onAppear(perform: {
+            driverState = .NotAvailable
+            viewModel.setLocation(location: CLLocationCoordinate2D(latitude: client.coordinates.lat, longitude: client.coordinates.lan))
+            mapState = .loctionSelected
+        })
     }
 }
