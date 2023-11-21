@@ -9,21 +9,45 @@ import SwiftUI
 
 struct DriverDetailsView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var isRequestPresented = false
     @State private var isChatViewPresented = false
     var driverInfo: DriverModel
+    
   
     var body: some View {
+       
         NavigationView {
             ZStack {
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
-                    Image("driver_image") // Replace with the actual image name or URL
+                    Image("driver_image") 
                         .resizable()
                         .cornerRadius(32)
                         .aspectRatio(contentMode: .fill)
-                        .frame(height: 200)
+                        .frame(height: 120)
                         .padding(.top, 20)
+                     
+                    HStack {
+                        Spacer().frame(width: 90)
+                    Button("Request a ride ") {
+                        isRequestPresented.toggle()
+                    }
+                    .padding(20)
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                    .sheet(isPresented: $isRequestPresented) {
+                        RequestSentView(driver: DriverModel(id: 1,
+                name: "Driver Driver",
+                location: "Tunis, Tunisie",
+                imageName: "driver_image",
+                description: "blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblabla",
+                reviews: "123",rideType: .taxi))
                   
+                   
+                        
+                    }
+                    }
                     HStack {
                         Text(driverInfo.name)
                             .font(.title)
@@ -61,7 +85,7 @@ struct DriverDetailsView: View {
                         .padding(.bottom, 10)
                    
                     Text(driverInfo.description)
-                        Spacer()
+                     
 
                     HStack {
                         Button("Chat") {

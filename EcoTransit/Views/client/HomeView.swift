@@ -14,8 +14,6 @@ struct HomeView: View {
     @State private var mapState = MapViewState.noInput
     @StateObject private var dataModel = DataModel()
     var stationViewModel : StationViewModel
-    @State var fromStation : StationsModel = StationsModel(title: "Station1", coordinates: Cordinates(lan: 10, lat: 36.5))
-    @State var toStation : StationsModel = StationsModel(title: "Station2", coordinates: Cordinates(lan: 10.2, lat: 36.7))
     @State private var visibleRect = MKMapRect(x: 145_000_000, y: 111_000_000, width: 15_000_000, height: 25_000_000)
     let items: [StationsModel] =  [
         
@@ -28,7 +26,7 @@ struct HomeView: View {
         
         ZStack (alignment: .bottom){
             ZStack (alignment: .top) {
-                MapViewRepresentable(mapState: $mapState, dataModel:dataModel, stationViewModel: stationViewModel, fromStation: fromStation, toStation: toStation )
+                MapViewRepresentable(mapState: $mapState, dataModel:dataModel, stationViewModel: stationViewModel )
                     .ignoresSafeArea()
                 
                 
@@ -56,7 +54,7 @@ struct HomeView: View {
                     .padding(.top, 23)
             }
             
-            if mapState == .loctionSelected{
+            if mapState == .loctionSelected || mapState == .taxiSelected{
                 RideRequestView(stationViewModel: stationViewModel, selectedCordinates: dataModel.data, mapState: $mapState)
                     .transition(.move(edge: .bottom))
                     .padding(.bottom ,10)
@@ -106,7 +104,12 @@ struct HomeView: View {
             }
             if mapState == .iterinaryDisplayed
             {
-                IterinaryView(fromStation: fromStation, toStation: toStation)
+                IterinaryView(isTaxi: false)
+                    .transition(.move(edge: .bottom))
+                    .padding(.bottom ,15)
+            }
+            if mapState == .iterinaryDisplayedTaxi {
+                IterinaryView(isTaxi: true)
                     .transition(.move(edge: .bottom))
                     .padding(.bottom ,15)
             }

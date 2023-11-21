@@ -12,6 +12,7 @@ struct RideRequestView: View {
     @State private var selectedRideType: RideType = .taxi
     @State private var offset: CGFloat = 0
     @State private var isSwipedDown: Bool = false
+    @State private var isTaxi: Bool = false
     @State private var isConfirmationPresented: Bool = false
     @StateObject var stationViewModel : StationViewModel
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
@@ -114,7 +115,12 @@ struct RideRequestView: View {
             
            
             Button {
-                mapState = .vehiculeSelected
+                if(selectedRideType == .taxi) {
+                    isTaxi = true
+                    mapState = .taxiSelected
+                } else {
+                    mapState = .busSelected
+                }
        
                 print(mapState)
         
@@ -131,7 +137,9 @@ struct RideRequestView: View {
                            .cornerRadius(20)
                            .edgesIgnoringSafeArea(.all)
                            
+                           
         }
+            
         .background(Color.white.opacity(0.8))
         .offset(y: isSwipedDown ? UIScreen.main.bounds.height : offset)
             .animation(.spring())
@@ -153,6 +161,7 @@ struct RideRequestView: View {
                     }
                 }
         )
+        
        
     }
     

@@ -23,6 +23,7 @@
 		8D410EDF2B0C194C00A944B2 /* MapViewRepDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D410EDE2B0C194C00A944B2 /* MapViewRepDriver.swift */; };
 		8D629AD22AF90DE300B6F08E /* WeclomeSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D629AD12AF90DE300B6F08E /* WeclomeSwipeView.swift */; };
 		8D6E31D62AF99B76008C4AC6 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */; };
+		8D74EEA02B0D52EB00E49BD0 /* RequestSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D74EE9F2B0D52EB00E49BD0 /* RequestSentView.swift */; };
 		8D78B6052AFD3D2E001EBF97 /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78B6042AFD3D2E001EBF97 /* DriverModel.swift */; };
 		8D78B60B2AFD3F62001EBF97 /* DriverDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */; };
 		8D90B04F2AFBE9BB00DDB461 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */; };
@@ -123,6 +124,7 @@
 		8D410EDE2B0C194C00A944B2 /* MapViewRepDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepDriver.swift; sourceTree = "<group>"; };
 		8D629AD12AF90DE300B6F08E /* WeclomeSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeclomeSwipeView.swift; sourceTree = "<group>"; };
 		8D6E31D52AF99B76008C4AC6 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		8D74EE9F2B0D52EB00E49BD0 /* RequestSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSentView.swift; sourceTree = "<group>"; };
 		8D78B6042AFD3D2E001EBF97 /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
 		8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsView.swift; sourceTree = "<group>"; };
 		8D90B04E2AFBE9BB00DDB461 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				8DCAF8CF2AF717C500912616 /* MapViewActionButton.swift */,
 				8D78B60A2AFD3F62001EBF97 /* DriverDetailsView.swift */,
 				8DAAF4FE2B00430000CB3012 /* ContentChatView.swift */,
+				8D74EE9F2B0D52EB00E49BD0 /* RequestSentView.swift */,
 			);
 			path = client;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				8DCAF8D62AF71F3700912616 /* LocationSearchResultCell.swift in Sources */,
 				8D9A7D9D2B01514B00420531 /* DriverListView.swift in Sources */,
 				8D9AB1F72B0821810070C8BB /* Swipe2View.swift in Sources */,
+				8D74EEA02B0D52EB00E49BD0 /* RequestSentView.swift in Sources */,
 				8DAAF5162B006B1A00CB3012 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

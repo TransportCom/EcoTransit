@@ -15,8 +15,8 @@ struct IterinaryView: View {
     @State private var isSwipedDown: Bool = false
     @State private var isConfirmationPresented: Bool = false
     @State var showDriverList: Bool = false
-    @State var fromStation : StationsModel
-    @State var toStation : StationsModel
+    @State var isTaxi : Bool = false
+    @EnvironmentObject var locationViewModel: LocationSearchViewModel
     var body: some View {
         VStack {
             
@@ -46,7 +46,7 @@ struct IterinaryView: View {
                 
                 VStack(alignment: .leading, spacing: 24) {
                     HStack {
-                        Text(fromStation.title)
+                        Text(locationViewModel.fromStation?.title ?? "Current Location")
                             .font(.system(size: 16))
                             .foregroundColor(.gray)
                         Spacer()
@@ -57,15 +57,24 @@ struct IterinaryView: View {
                     .padding(10)
                     
                     HStack {
-                        Text(toStation.title)
+                        Text( locationViewModel.toStation?.title ?? locationViewModel.selectedLocationTitle	 ?? "Station 2"  )
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.green)
                         Spacer()
                         Text("To Station")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(.gray)
+                       }
                     }
                     .padding(10)
+                    .sheet(isPresented: $isTaxi) {
+                       DriverListView(drivers: [
+                           DriverModel(id: 1, name: "imen test", location: "location 1, testestets", imageName: "driver_profile_image", description: "Driver description", reviews: "5", rideType: .taxi)
+                           // Add more drivers as needed
+                       ])
+                       .transition(.move(edge: .bottom))
+                       .padding(.bottom ,15)
+                       .animation(.spring())
                 }
                 .padding(.leading, 10)
                 /*.onAppear(perform: {

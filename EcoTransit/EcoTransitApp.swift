@@ -21,7 +21,7 @@ struct EcoTransitApp: App {
          //DriverWelcomeSwipeView()
           // StationsView(stationViewModel: StationViewModel())
             //StationsView(stationViewModel: StationViewModel())
-            HomeView(stationViewModel: StationViewModel())
+           HomeView(stationViewModel: StationViewModel())
      
             .environmentObject(locationViewModel)
         }

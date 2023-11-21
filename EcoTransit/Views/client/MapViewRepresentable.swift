@@ -17,9 +17,6 @@ struct MapViewRepresentable: UIViewRepresentable {
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
     @ObservedObject var dataModel : DataModel
     let stationViewModel : StationViewModel
-    @State var fromStation: StationsModel
-    @State var toStation: StationsModel
-
 
 
     func makeUIView(context: Context) -> some UIView {
@@ -40,20 +37,25 @@ struct MapViewRepresentable: UIViewRepresentable {
             break
         case .loctionSelected:
             break
-        case .vehiculeSelected:
+        case .busSelected:
             if let coordinate = locationViewModel.selectedLocationCoordinate {
-                print("DEBUG: coordinate is \(coordinate)")
-                context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
                 context.coordinator.fetchIterinary(toCoordinate:coordinate)
                 DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: {
                     mapState = .iterinaryDisplayed
-                    fromStation = stationViewModel.fromStation
-                    toStation = stationViewModel.toStation
-                    
                 })
             }
             break
-        case .iterinaryDisplayed:
+        case .taxiSelected:
+            if let coordinate = locationViewModel.selectedLocationCoordinate {
+                print("DEBUG: coordinate is \(coordinate)")
+                context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
+                DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: {
+                    mapState = .iterinaryDisplayedTaxi
+                })
+            }
+
+            break
+        case .iterinaryDisplayed,.iterinaryDisplayedTaxi:
             break
         }
     }
@@ -110,6 +112,10 @@ extension MapViewRepresentable {
             parent.mapView.removeAnnotations(parent.mapView.annotations)
             parent.stationViewModel.fetchIterinary(id:"654c9759c0897c447536ab08" , fromLocation: Cordinates(lan: userLocationCoordinate?.longitude ?? 0, lat: userLocationCoordinate?.latitude ?? 0), toLocation: Cordinates(lan: coordinate.longitude, lat: coordinate.latitude))
             DispatchQueue.main.asyncAfter(deadline: .now()+1, execute: {
+                
+                self.parent.locationViewModel.fromStation = self.parent.stationViewModel.fromStation
+                self.parent.locationViewModel.toStation = self.parent.stationViewModel.toStation
+                
                 let anno = MKPointAnnotation()
                 anno.coordinate = coordinate
                 
@@ -135,11 +141,16 @@ extension MapViewRepresentable {
         
         func addAndSelectAnnotation(withCoordinate coordinate: CLLocationCoordinate2D) {
             parent.mapView.removeAnnotations(parent.mapView.annotations)
+            
+            
             let anno = MKPointAnnotation()
             anno.coordinate = coordinate
             parent.mapView.addAnnotation(anno)
             parent.mapView.selectAnnotation(anno, animated: true)
             parent.mapView.showAnnotations(parent.mapView.annotations, animated: true)
+            self.configurePolyline(withDestinationCoordinate: anno.coordinate, fromStation: CLLocationCoordinate2D(latitude: self.userLocationCoordinate?.latitude ?? 0, longitude: self.userLocationCoordinate?.longitude ?? 0),title:"Polyline")
+
+
         }
 
         func configurePolyline(withDestinationCoordinate coordinate: CLLocationCoordinate2D, fromStation:CLLocationCoordinate2D, title: String ) {

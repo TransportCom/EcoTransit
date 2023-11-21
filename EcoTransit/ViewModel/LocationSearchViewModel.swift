@@ -17,6 +17,8 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     @Published var results = [MKLocalSearchCompletion]()
     @Published var selectedLocationCoordinate: CLLocationCoordinate2D?
     @Published var selectedLocationTitle: String?
+    @Published var fromStation : StationsModel?
+    @Published var toStation : StationsModel?
 
     private let searchCompleter = MKLocalSearchCompleter()
     var queryFragment: String = ""
