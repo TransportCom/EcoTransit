@@ -40,9 +40,9 @@ struct MapViewRepDriver: UIViewRepresentable {
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
         break
-        case .busSelected,.taxiSelected:
+        case .busSelected,.taxiSelected,.collectiveTaxiSelected:
             break
-        case .iterinaryDisplayed,.iterinaryDisplayedTaxi:
+        case .iterinaryDisplayedBus,.iterinaryDisplayedCollectiveTaxi,.iterinaryDisplayedTaxi:
             break
         }
         

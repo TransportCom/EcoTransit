@@ -30,7 +30,7 @@ import SwiftUI
          }
          .ignoresSafeArea()
          .onAppear {
-         stationViewModel.fetchIterinary(id:"654c9759c0897c447536ab08" , fromLocation: fromLocation, toLocation: toLocation)
+             stationViewModel.fetchIterinary( fromLocation: fromLocation, toLocation: toLocation, type: "bus")
          }.overlay {
          if stationViewModel.stations.isEmpty {
          // You can show a loading indicator or placeholder here

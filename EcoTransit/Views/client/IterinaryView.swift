@@ -10,14 +10,17 @@ import SwiftUI
 
 
 struct IterinaryView: View {
-    @State private var selectedRideType: RideType = .bus
+    @State var selectedRideType: RideType
     @State private var offset: CGFloat = 0
     @State private var isSwipedDown: Bool = false
     @State private var isConfirmationPresented: Bool = false
     @State var showDriverList: Bool = false
     @State var isTaxi : Bool = false
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
+    @StateObject var stationViewModel : StationViewModel
+    
     var body: some View {
+        
         VStack {
             
             Capsule()
@@ -45,6 +48,8 @@ struct IterinaryView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 24) {
+                    
+                    Text(selectedRideType.description) 
                     HStack {
                         Text(locationViewModel.fromStation?.title ?? "Current Location")
                             .font(.system(size: 16))
@@ -57,7 +62,7 @@ struct IterinaryView: View {
                     .padding(10)
                     
                     HStack {
-                        Text( locationViewModel.toStation?.title ?? locationViewModel.selectedLocationTitle	 ?? "Station 2"  )
+                        Text( locationViewModel.toStation?.title ?? locationViewModel.selectedLocationTitle	 ?? "Destination"  )
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.green)
                         Spacer()

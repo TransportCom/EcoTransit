@@ -11,8 +11,10 @@ enum MapViewState {
     case searchingForLocation
     case loctionSelected
     case busSelected
+    case collectiveTaxiSelected
     case taxiSelected
-    case iterinaryDisplayed
+    case iterinaryDisplayedBus
+    case iterinaryDisplayedCollectiveTaxi
     case iterinaryDisplayedTaxi
 
 }

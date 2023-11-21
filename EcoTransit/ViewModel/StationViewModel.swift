@@ -16,9 +16,9 @@ class StationViewModel: ObservableObject {
     
     @Published var message: String = ""
     
-    @Published var fromStation = StationsModel(title:"INITIAL",coordinates: Cordinates(lan: 0, lat: 0))
+    @Published var fromStation : StationsModel?
     
-    @Published var toStation = StationsModel(title:"INITIAL",coordinates: Cordinates(lan: 0, lat: 0))
+    @Published var toStation : StationsModel?
 
     
     
@@ -41,8 +41,8 @@ class StationViewModel: ObservableObject {
         }
     }
     
-    func fetchIterinary(id: String, fromLocation: Cordinates, toLocation: Cordinates) {
-        Stationservice().fetchIterinary(id:id, fromLocation:fromLocation, toLocation:toLocation ){ result in
+    func fetchIterinary(fromLocation: Cordinates, toLocation: Cordinates, type: String) {
+        Stationservice().fetchIterinary( fromLocation:fromLocation, toLocation:toLocation, type: type ){ result in
             switch result {
                 
             case.success(let data):
@@ -53,7 +53,6 @@ class StationViewModel: ObservableObject {
                     self.toStation = data?.toStation ?? StationsModel(title: "noResponse", coordinates: Cordinates(lan: 0, lat: 0))
                     print("FROM###### \(self.fromStation)")
                     print("TO###### \(self.toStation)")
-                    self.stations = [self.fromStation, self.toStation]
                 }
                 
             case.failure(let error):

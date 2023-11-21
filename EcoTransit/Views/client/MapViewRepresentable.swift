@@ -39,12 +39,21 @@ struct MapViewRepresentable: UIViewRepresentable {
             break
         case .busSelected:
             if let coordinate = locationViewModel.selectedLocationCoordinate {
-                context.coordinator.fetchIterinary(toCoordinate:coordinate)
+                context.coordinator.fetchIterinary(toCoordinate:coordinate, type: "bus")
                 DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: {
-                    mapState = .iterinaryDisplayed
+                    mapState = .iterinaryDisplayedBus
                 })
             }
             break
+        case .collectiveTaxiSelected:
+            if let coordinate = locationViewModel.selectedLocationCoordinate {
+                context.coordinator.fetchIterinary(toCoordinate:coordinate,type: "collectiveTaxi")
+                DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: {
+                    mapState = .iterinaryDisplayedCollectiveTaxi
+                })
+            }
+            break
+
         case .taxiSelected:
             if let coordinate = locationViewModel.selectedLocationCoordinate {
                 print("DEBUG: coordinate is \(coordinate)")
@@ -55,7 +64,7 @@ struct MapViewRepresentable: UIViewRepresentable {
             }
 
             break
-        case .iterinaryDisplayed,.iterinaryDisplayedTaxi:
+        case .iterinaryDisplayedBus,.iterinaryDisplayedCollectiveTaxi,.iterinaryDisplayedTaxi:
             break
         }
     }
@@ -108,11 +117,10 @@ extension MapViewRepresentable {
        
         }
 
-        func fetchIterinary(toCoordinate coordinate: CLLocationCoordinate2D)  {
+        func fetchIterinary(toCoordinate coordinate: CLLocationCoordinate2D, type: String)  {
             parent.mapView.removeAnnotations(parent.mapView.annotations)
-            parent.stationViewModel.fetchIterinary(id:"654c9759c0897c447536ab08" , fromLocation: Cordinates(lan: userLocationCoordinate?.longitude ?? 0, lat: userLocationCoordinate?.latitude ?? 0), toLocation: Cordinates(lan: coordinate.longitude, lat: coordinate.latitude))
+            parent.stationViewModel.fetchIterinary( fromLocation: Cordinates(lan: userLocationCoordinate?.longitude ?? 0, lat: userLocationCoordinate?.latitude ?? 0), toLocation: Cordinates(lan: coordinate.longitude, lat: coordinate.latitude), type: type)
             DispatchQueue.main.asyncAfter(deadline: .now()+1, execute: {
-                
                 self.parent.locationViewModel.fromStation = self.parent.stationViewModel.fromStation
                 self.parent.locationViewModel.toStation = self.parent.stationViewModel.toStation
                 
@@ -120,14 +128,12 @@ extension MapViewRepresentable {
                 anno.coordinate = coordinate
                 
                 let fromAnno = MKPointAnnotation()
-                fromAnno.coordinate = CLLocationCoordinate2D(latitude: self.parent.stationViewModel.fromStation.coordinates.lat, longitude: self.parent.stationViewModel.fromStation.coordinates.lan)
+                fromAnno.coordinate = CLLocationCoordinate2D(latitude: self.parent.stationViewModel.fromStation?.coordinates.lat ?? 0, longitude: self.parent.stationViewModel.fromStation?.coordinates.lan ?? 0)
                 
                 let toAnno = MKPointAnnotation()
-                toAnno.coordinate = CLLocationCoordinate2D(latitude: self.parent.stationViewModel.toStation.coordinates.lat, longitude: self.parent.stationViewModel.toStation.coordinates.lan)
+                toAnno.coordinate = CLLocationCoordinate2D(latitude: self.parent.stationViewModel.toStation?.coordinates.lat ?? 0, longitude: self.parent.stationViewModel.toStation?.coordinates.lan ?? 0)
                  
-                self.parent.mapView.addAnnotation(anno)
-                self.parent.mapView.addAnnotation(fromAnno)
-                self.parent.mapView.addAnnotation(toAnno)
+                self.parent.mapView.addAnnotations([fromAnno,toAnno,anno])
                 self.configurePolyline(withDestinationCoordinate: toAnno.coordinate, fromStation: fromAnno.coordinate,title:"Polyline")
                 self.configurePolyline(withDestinationCoordinate: fromAnno.coordinate, fromStation: CLLocationCoordinate2D(latitude: self.userLocationCoordinate?.latitude ?? 0, longitude: self.userLocationCoordinate?.longitude ?? 0),title:"Walk")
                 self.configurePolyline(withDestinationCoordinate: anno.coordinate, fromStation: toAnno.coordinate,title:"Walk")

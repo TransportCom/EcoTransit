@@ -118,8 +118,10 @@ struct RideRequestView: View {
                 if(selectedRideType == .taxi) {
                     isTaxi = true
                     mapState = .taxiSelected
-                } else {
+                } else if(selectedRideType == .bus) {
                     mapState = .busSelected
+                } else if(selectedRideType == .collectiveTaxi) {
+                    mapState = .collectiveTaxiSelected
                 }
        
                 print(mapState)

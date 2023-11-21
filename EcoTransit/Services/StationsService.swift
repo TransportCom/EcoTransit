@@ -32,8 +32,8 @@ struct Stationservice {
         }
     }
     
-    func fetchIterinary(id: String, fromLocation: Cordinates, toLocation: Cordinates, completion: @escaping(Result<fetchIterinaryResponse?, Error>) -> Void) {
-        AF.request("\(Network.fetchIterinaryUrl)/\(id)?fromLan=\(fromLocation.lan)&fromLat=\(fromLocation.lat)&toLan=\(toLocation.lan)&toLat=\(toLocation.lat)",
+    func fetchIterinary( fromLocation: Cordinates, toLocation: Cordinates, type: String, completion: @escaping(Result<fetchIterinaryResponse?, Error>) -> Void) {
+        AF.request("\(Network.fetchIterinaryUrl)?fromLan=\(fromLocation.lan)&fromLat=\(fromLocation.lat)&toLan=\(toLocation.lan)&toLat=\(toLocation.lat)&type=\(type)",
                    method: .get,
                    encoding: JSONEncoding.default)
         .validate(contentType: ["application/json"])

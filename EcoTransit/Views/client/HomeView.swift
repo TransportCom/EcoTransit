@@ -102,14 +102,20 @@ struct HomeView: View {
                     
                     }
             }
-            if mapState == .iterinaryDisplayed
+            if mapState == .iterinaryDisplayedBus
             {
-                IterinaryView(isTaxi: false)
+                IterinaryView(selectedRideType: .bus,isTaxi: false,stationViewModel: stationViewModel)
+                    .transition(.move(edge: .bottom))
+                    .padding(.bottom ,15)
+            }
+            if mapState == .iterinaryDisplayedCollectiveTaxi
+            {
+                IterinaryView(selectedRideType: .collectiveTaxi,isTaxi: false,stationViewModel: stationViewModel)
                     .transition(.move(edge: .bottom))
                     .padding(.bottom ,15)
             }
             if mapState == .iterinaryDisplayedTaxi {
-                IterinaryView(isTaxi: true)
+                IterinaryView(selectedRideType: .taxi,isTaxi: true,stationViewModel: stationViewModel)
                     .transition(.move(edge: .bottom))
                     .padding(.bottom ,15)
             }

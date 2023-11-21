@@ -15,9 +15,9 @@ case bus
 
 var id: Int {return rawValue }
 var description: String {switch self{
-case .collectiveTaxi : return "collectiveTaxi"
-    case .taxi: return "taxi"
-    case .bus: return "bus"}}
+case .collectiveTaxi : return "Collective Taxi"
+    case .taxi: return "Taxi"
+    case .bus: return "Bus"}}
 var imageName: String {switch self{
 case .collectiveTaxi : return "collectiveTaxi"
     case .taxi: return "taxi1"
