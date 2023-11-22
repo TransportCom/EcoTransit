@@ -1,16 +1,20 @@
 //
-//  EcoTransitApp.swift
-//  EcoTransit
+//  ecotransitApp.swift
+//  ecotransit
 //
-//  Created by imba on 4/11/2023.
+//  Created by Mohamed Achi on 4/11/2023.
 //
 import SwiftUI
 import Firebase
 import MapKit
-	@main
-struct EcoTransitApp: App {
-    @StateObject var locationViewModel = LocationSearchViewModel()
+
+@main
+struct ecotransitApp: App {
     let persistenceController = PersistenceController.shared
+    @StateObject var loginPageModel = LoginPageModel()
+    @StateObject var locationViewModel = LocationSearchViewModel()
+
+
 
     init() {
         FirebaseApp.configure()
@@ -21,9 +25,15 @@ struct EcoTransitApp: App {
          //DriverWelcomeSwipeView()
           // StationsView(stationViewModel: StationViewModel())
             //StationsView(stationViewModel: StationViewModel())
-           HomeView(stationViewModel: StationViewModel())
+           // HomeView(stationViewModel: StationViewModel())
      
-            .environmentObject(locationViewModel)
+            //.environmentObject(locationViewModel)
+            ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(loginPageModel)
+                .environmentObject(locationViewModel)
+
+
         }
     }
 }

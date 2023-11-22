@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4F67D591-1860-4024-B056-317B5B733979"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6678369-832E-44E3-8C8B-90B1FFA7F671"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ecotransit/views/SideMenuView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50B6F1B4-1B48-4D8D-85AD-7CB6382E5E84"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../var/folders/jp/8x5c53xj06v219tp2wftzg8c0000gn/T/swift-generated-sources/@__swiftmacro_10ecotransit33_EEC129EFA724607BFE61A6169F76A89BLl7PreviewfMf0_.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2"
+            endingLineNumber = "2"
+            landmarkName = "$s10ecotransit33_EEC129EFA724607BFE61A6169F76A89BLl7PreviewfMf0_15PreviewRegistryfMu_"
+            landmarkType = "37">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77274D23-FC91-44B6-A549-4831FD0A5F28"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ecotransit/ecotransitApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "ecotransitApp"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "77274D23-FC91-44B6-A549-4831FD0A5F28 - 37cf902559cc2c14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ecotransit.ecotransitApp.init() -&gt; ecotransit.ecotransitApp"
+                  moduleName = "ecotransit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamedachi/Desktop/ecotransit/ecotransit/ecotransitApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "77274D23-FC91-44B6-A549-4831FD0A5F28 - ebde01004c178aab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "ecotransit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamedachi/Desktop/ecotransit/ecotransit/ecotransitApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
