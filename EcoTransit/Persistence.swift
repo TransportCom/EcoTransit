@@ -1,8 +1,8 @@
 //
 //  Persistence.swift
-//  EcoTransit
+//  ecotransit
 //
-//  Created by imba on 4/11/2023.
+//  Created by Mohamed Achi on 4/11/2023.
 //
 
 import CoreData
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "EcoTransit")
+        container = NSPersistentContainer(name: "ecotransit")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

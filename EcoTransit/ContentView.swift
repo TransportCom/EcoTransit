@@ -1,88 +1,73 @@
 //
 //  ContentView.swift
-//  EcoTransit
+//  ecotransit
 //
-//  Created by imba on 4/11/2023.
+//  Created by Mohamed Achi on 14/11/2023.
 //
+
 
 import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    // Log Status..
+    @AppStorage("log_Status") var log_Status: Bool = false
+    @AppStorage("loading") var isloading: Bool = false
+    @AppStorage("token") var logger: String = ""
+    @EnvironmentObject var login : LoginPageModel
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        Group{
+            if isloading{
+                ProgressView("Signing Up...")
+                    .progressViewStyle(CircularProgressViewStyle(tint: .green))
+                    .foregroundColor(Color("background"))
+                    .background(Color.white.opacity(0.5))
+                    .cornerRadius(10)
+                    .padding()
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+            else{
+                if log_Status{
+                    MainView()
+                        .onAppear(perform: {
+                            let webservice = WebService()
+                            webservice.profile(token: logger) { result in
+                                DispatchQueue.main.async {
+                                    switch result {
+                                    case .success(let model):
+                                        print("Logged in successfully, tokensss: \(model.token)")
+                                        login.token = model.token
+                                        login.nom = model.nom
+                                        login.prenom = model.prenom
+                                        login.email = model.email
+                                        login.tel = model.tel
+                                        login.role = model.role
+                                        logger = login.token
+                                        
+                                        isloading = true
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                            isloading = false
+                                            login.Login()
+                                        }
+                                        
+                                    case .failure(let error):
+                                        print("An error occurred while signing in: \(error.localizedDescription)")
+                                        
+                                    }
+                                }
+                            }
+                        })
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                else{
+                    OnBoardingPage()
                 }
-            }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }
