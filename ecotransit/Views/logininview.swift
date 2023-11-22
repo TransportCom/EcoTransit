@@ -8,15 +8,15 @@
 import SwiftUI
 import LocalAuthentication
 import CoreData
+import GoogleSignIn
+import GoogleSignInSwift
 
 struct Role: Identifiable {
     let id = UUID()
     var imageName: String
     let title: String
 }
-
  
-
 struct LoginInView: View {
     @State private var roleList: [Role] = [
            Role(imageName: "entreprise", title: "entreprise"),
@@ -24,12 +24,17 @@ struct LoginInView: View {
            Role(imageName: "voyageur", title: "voyageur") ,
            // Add more roles as needed
        ]
-        
-    @AppStorage("stored_User") var user = "STORED_EMAIL_ID"
+    @AppStorage("stored_User") var user = "hjhfkljfl@bkkg.tn"
+    @AppStorage("stored_Password") var password = "12233456"
     @AppStorage("status") var logged = false
-  
-    @StateObject var loginData: LoginPageModel = LoginPageModel()
+    @AppStorage("loading") var isloading = false
+    @AppStorage("token") var logger: String = ""
+    @ObservedObject var loginData: LoginPageModel = LoginPageModel()
+    @EnvironmentObject var login: LoginPageModel
+    
+    
     var body: some View {
+      
         
         VStack{
             if loginData.registerUser{
@@ -75,7 +80,7 @@ struct LoginInView: View {
                                 Color("background"),
                                 .white
                                     .opacity(0.8),
-                               Color("background2")
+                               Color("background")
                             ], startPoint: .top, endPoint: .bottom)
                             .frame(width: 100, height: 100)
                             .clipShape(Circle())
@@ -137,7 +142,7 @@ struct LoginInView: View {
                             Text("Forgot password?")
                                 .font(.custom(customFont, size: 14))
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color("background2"))
+                                .foregroundColor(Color("background"))
                         }
                         .padding(.top,8)
                         .frame(maxWidth: .infinity,alignment: .leading)
@@ -145,9 +150,20 @@ struct LoginInView: View {
                     }
                     // Login Button...
                     if loginData.registerUser&&(loginData.role_status == false){
-                        Button {
+                        Button {   let webservice = WebService()
+                            
                             if loginData.registerUser{
                                 loginData.rolee()
+                                webservice.signUp(email: loginData.email ,password :
+                                                    loginData.password ,tel : loginData.tel,nom : loginData.nom,prenom : loginData.prenom){ success, error in
+                                    if success {
+                                        print("User has been created")
+                                    } else {
+                                        print("an error was occured while creating this user")
+                                        
+                                        print(error?.localizedDescription ?? "Unknown error")
+                                    }
+                                }
                             }
                             else{
                                 loginData.Login()
@@ -171,12 +187,29 @@ struct LoginInView: View {
                     }
                     else if (loginData.registerUser == false)&&(loginData.role_status == false)&&(loginData.Forgot_pass == false){
                         Button {
-                            if loginData.registerUser{
-                                loginData.Register()
-                            }
-                            else{
-                                loginData.Login()
-                            }
+                            let webservice = WebService()
+                            webservice.signIn(email: loginData.email, password: loginData.password) { result in
+                                                        DispatchQueue.main.async {
+                                                            switch result {
+                                                            case .success(let model):
+                                                                print("Logged in successfully, token: \(model.token)")
+                                                                login.token = model.token
+                                                                login.nom = model.nom
+                                                                login.prenom = model.prenom
+                                                                login.email = model.email
+                                                                login.tel = model.tel
+                                                                login.role = model.role
+                                                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                                                   
+                                                                    loginData.Login()// Activez la navigation vers ProfileView
+                                                                }
+
+                                                            case .failure(let error):
+                                                                print("An error occurred while signing in: \(error.localizedDescription)")
+                                                            
+                                                            }
+                                                        }
+                                                    }
                         } label: {
                             
                             Text("Login")
@@ -195,7 +228,7 @@ struct LoginInView: View {
                         if loginData.Forgot_pass{
                             Button {
                             
-                                loginData.sendemail()
+                                
                             }
                         label: {
                             
@@ -215,6 +248,7 @@ struct LoginInView: View {
                         ForEach(roleList) { role in
                                          RecentlyBookedRole(role: role)
                                      }
+                        Spacer()
                     }
                     if (loginData.registerUser == false)&&(loginData.role_status == false)&&(loginData.Forgot_pass == false){
                         Text("                        or ")
@@ -224,33 +258,11 @@ struct LoginInView: View {
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                             .padding(.horizontal, 20)
-                        HStack{
-                            Button(action: {}, label: {
-                                Image("fb")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .padding(.horizontal, 60)
-                                    .padding(.vertical, 15)
-                                    .background(Color("fbback"))
-                                    .cornerRadius(15)
-                            })
-                            Spacer()
-                            Button(action: {}, label: {
-                                Image("google")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .padding(.horizontal, 60)
-                                    .padding(.vertical, 15)
-                                    .background(Color("gback"))
-                                    .cornerRadius(15)
-                            })
-                        }
-                        .padding(.horizontal, 30)
                         
                         Button(action: authenticateUser, label: {
                             
                             // getting biometrictype...
-                            Image(systemName: LAContext().biometryType == .faceID ? "faceid" : "touchid")
+                            Image(systemName: LAContext().biometryType == .faceID ? "touchid" : "faceid")
                                 .font(.title)
                                 .foregroundColor(.black)
                                 .padding()
@@ -303,16 +315,6 @@ struct LoginInView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("background"))
-        
-        
-        .onChange(of: loginData.registerUser) { newValue in
-            
-            loginData.email = ""
-            loginData.password = ""
-            loginData.re_Enter_Password = ""
-            loginData.showPassword = false
-            loginData.showReEnterPassword = false
-        }
     }
     
     @ViewBuilder
@@ -384,11 +386,43 @@ struct LoginInView: View {
             }
             
             // setting logged status as true...
-            withAnimation(.easeOut){loginData.log_Status = true}
+            withAnimation(.easeOut){
+                loginData.email=user
+                    loginData.password=password
+                   
+                    let webservice = WebService()
+                    webservice.signIn(email: loginData.email, password: loginData.password) { result in
+                                                DispatchQueue.main.async {
+                                                    switch result {
+                                                    case .success(let model):
+                                                        print("Logged in successfully, token: \(model.token)")
+                                                        login.token = model.token
+                                                        login.nom = model.nom
+                                                        login.prenom = model.prenom
+                                                        login.email = model.email
+                                                        login.tel = model.tel
+                                                        login.role = model.role
+                                                        login.logger = model.token
+                                                        
+                                                        isloading = true
+                                                        
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                                            isloading = false
+                                                            loginData.Login()
+                                                        }
+
+                                                    case .failure(let error):
+                                                        print("An error occurred while signing in: \(error.localizedDescription)")
+                                                    
+                                                    }
+                                                }
+                                            }
+            }
+            }
         }
     }
     
-}
+
 struct RoleCard: View {
     let role: Role
 
@@ -421,6 +455,7 @@ struct RecentlyBookedRole: View {
             Color("background")
                 .frame(width: 350, height: 150)
                 .cornerRadius(15)
+            
                     })
             
 
@@ -439,7 +474,9 @@ struct RecentlyBookedRole: View {
             }
             .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
         }
-        .padding(.trailing, 20)
+        .padding(.trailing, 5)
+        .padding(.horizontal , 10)
+        Spacer()
        
     }
    
@@ -456,6 +493,7 @@ struct CustomTextFieldStyle: TextFieldStyle {
             .foregroundColor(Color.black)
     }
 }
+
 #Preview {
     LoginInView()
 }

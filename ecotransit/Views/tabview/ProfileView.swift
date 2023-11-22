@@ -12,7 +12,8 @@ struct ProfileView: View {
     
     // Delete Option...
     @State var showDeleteOption: Bool = false
-    @StateObject var loginData: LoginPageModel = LoginPageModel()
+    @EnvironmentObject var loginData: LoginPageModel
+
     var body: some View {
         
         NavigationView{
@@ -27,25 +28,26 @@ struct ProfileView: View {
                     
                     VStack(spacing: 15){
                         
-                        Image("profile-image")
+                        Image("profiless")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 60, height: 60)
                             .clipShape(Circle())
                             .offset(y: -30)
                             .padding(.bottom,-30)
-                        
-                        Text("Rosina Doe")
-                            .font(.custom(customFont, size: 16))
-                            .fontWeight(.semibold)
-                        
+                        HStack{ Text(loginData.nom)
+                                .font(.custom(customFont, size: 16))
+                                .fontWeight(.bold)
+                            Text(loginData.prenom)
+                                    .font(.custom(customFont, size: 16))
+                                    .fontWeight(.bold)}
                         HStack(alignment: .top, spacing: 10) {
                             
                             Image(systemName: "location.north.circle.fill")
                                 .foregroundColor(.gray)
                                 .rotationEffect(.init(degrees: 180))
                             
-                            Text("Address: 43 Oxford Road\nM13 4GR\nManchester, UK")
+                            Text(loginData.email)
                                 .font(.custom(customFont, size: 15))
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -101,7 +103,15 @@ struct ProfileView: View {
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .background(Color("HomeBG").ignoresSafeArea())
                     }
-                    Button(action:  { loginData.log_Status = false }, label: {
+                    Button(action:  { loginData.email = ""
+                        loginData.password = ""
+                        loginData.prenom = ""
+                        loginData.tel = ""
+                        loginData.nom = ""
+                        loginData.role = ""
+                        loginData.token = ""
+                        loginData.log_Status = false
+                        print (loginData.token)}, label: {
                         Text("logout")
                             .foregroundColor(.red)
                     })

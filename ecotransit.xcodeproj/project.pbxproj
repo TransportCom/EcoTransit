@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0A2AFD2B090743001B5642 /* webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A2AFC2B090743001B5642 /* webservice.swift */; };
+		1B0A2B002B0AD99A001B5642 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 1B0A2AFF2B0AD99A001B5642 /* GoogleSignIn */; };
+		1B0A2B022B0AD99A001B5642 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B0A2B012B0AD99A001B5642 /* GoogleSignInSwift */; };
 		1B701AD32AF656B200253DE1 /* ecotransitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AD22AF656B200253DE1 /* ecotransitApp.swift */; };
 		1B701AD72AF656B600253DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B701AD62AF656B600253DE1 /* Assets.xcassets */; };
 		1B701ADA2AF656B600253DE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B701AD92AF656B600253DE1 /* Preview Assets.xcassets */; };
 		1B701ADC2AF656B600253DE1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701ADB2AF656B600253DE1 /* Persistence.swift */; };
 		1B701ADF2AF656B600253DE1 /* ecotransit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B701ADD2AF656B600253DE1 /* ecotransit.xcdatamodeld */; };
 		1B701AEC2AF65A1000253DE1 /* LoginInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B701AEB2AF65A1000253DE1 /* LoginInView.swift */; };
+		1B77E6A92B0E202800C4B3B6 /* ForgetpasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B77E6A82B0E202800C4B3B6 /* ForgetpasswordView.swift */; };
+		1B77E6AB2B0E2DD000C4B3B6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B77E6AA2B0E2DD000C4B3B6 /* UserModel.swift */; };
 		1BDDA8EC2AFB86DF00836CD8 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8EB2AFB86DF00836CD8 /* FavoriteView.swift */; };
 		1BDDA8EE2AFB87F900836CD8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDA8ED2AFB87F900836CD8 /* ProfileView.swift */; };
 		1BF41BF22B03D6D10051277A /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41BF12B03D6D10051277A /* OnBoardingPage.swift */; };
@@ -29,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B0A2AFC2B090743001B5642 /* webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webservice.swift; sourceTree = "<group>"; };
+		1B0A2B032B0ADD04001B5642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B701ACF2AF656B200253DE1 /* ecotransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecotransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B701AD22AF656B200253DE1 /* ecotransitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecotransitApp.swift; sourceTree = "<group>"; };
 		1B701AD62AF656B600253DE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +43,8 @@
 		1B701ADB2AF656B600253DE1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		1B701ADE2AF656B600253DE1 /* ecotransit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ecotransit.xcdatamodel; sourceTree = "<group>"; };
 		1B701AEB2AF65A1000253DE1 /* LoginInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInView.swift; sourceTree = "<group>"; };
+		1B77E6A82B0E202800C4B3B6 /* ForgetpasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetpasswordView.swift; sourceTree = "<group>"; };
+		1B77E6AA2B0E2DD000C4B3B6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1BDDA8EB2AFB86DF00836CD8 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		1BDDA8ED2AFB87F900836CD8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1BF41BF12B03D6D10051277A /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
@@ -56,12 +65,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0A2B002B0AD99A001B5642 /* GoogleSignIn in Frameworks */,
+				1B0A2B022B0AD99A001B5642 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0A2AFB2B090726001B5642 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				1B0A2AFC2B090743001B5642 /* webservice.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		1B701AC62AF656B200253DE1 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,8 @@
 		1B701AD12AF656B200253DE1 /* ecotransit */ = {
 			isa = PBXGroup;
 			children = (
+				1B0A2B032B0ADD04001B5642 /* Info.plist */,
+				1B0A2AFB2B090726001B5642 /* services */,
 				1BF41BF72B03DB010051277A /* Fonts */,
 				1B701AD82AF656B600253DE1 /* Preview Content */,
 				1BDDA8F52AFB97EE00836CD8 /* models */,
@@ -112,6 +133,7 @@
 				1BDDA8EB2AFB86DF00836CD8 /* FavoriteView.swift */,
 				1BF41BF12B03D6D10051277A /* OnBoardingPage.swift */,
 				1BF41C052B04F4E90051277A /* MainView.swift */,
+				1B77E6A82B0E202800C4B3B6 /* ForgetpasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				1BF41BF32B03DAC10051277A /* LoginPageModel.swift */,
+				1B77E6AA2B0E2DD000C4B3B6 /* UserModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -168,6 +191,10 @@
 			dependencies = (
 			);
 			name = ecotransit;
+			packageProductDependencies = (
+				1B0A2AFF2B0AD99A001B5642 /* GoogleSignIn */,
+				1B0A2B012B0AD99A001B5642 /* GoogleSignInSwift */,
+			);
 			productName = ecotransit;
 			productReference = 1B701ACF2AF656B200253DE1 /* ecotransit.app */;
 			productType = "com.apple.product-type.application";
@@ -196,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 1B701AC62AF656B200253DE1;
+			packageReferences = (
+				1B0A2AFE2B0AD99A001B5642 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 1B701AD02AF656B200253DE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,10 +258,13 @@
 				1B701AEC2AF65A1000253DE1 /* LoginInView.swift in Sources */,
 				1BF41C062B04F4E90051277A /* MainView.swift in Sources */,
 				1BDDA8EE2AFB87F900836CD8 /* ProfileView.swift in Sources */,
+				1B0A2AFD2B090743001B5642 /* webservice.swift in Sources */,
 				1BF41C0D2B04F7030051277A /* Liked.swift in Sources */,
 				1BF41C022B03EB5B0051277A /* ContentView.swift in Sources */,
 				1BF41BF62B03DAE80051277A /* CustomCorners.swift in Sources */,
 				1B701ADC2AF656B600253DE1 /* Persistence.swift in Sources */,
+				1B77E6AB2B0E2DD000C4B3B6 /* UserModel.swift in Sources */,
+				1B77E6A92B0E202800C4B3B6 /* ForgetpasswordView.swift in Sources */,
 				1BF41C0B2B04F5960051277A /* Home.swift in Sources */,
 				1BDDA8EC2AFB86DF00836CD8 /* FavoriteView.swift in Sources */,
 				1BF41BF22B03D6D10051277A /* OnBoardingPage.swift in Sources */,
@@ -374,12 +407,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ecotransit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ecotransit/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "using face id to log in";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,12 +438,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ecotransit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ecotransit/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "using face id to log in";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +481,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B0A2AFE2B0AD99A001B5642 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B0A2AFF2B0AD99A001B5642 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B0A2AFE2B0AD99A001B5642 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		1B0A2B012B0AD99A001B5642 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B0A2AFE2B0AD99A001B5642 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1B701ADD2AF656B600253DE1 /* ecotransit.xcdatamodeld */ = {

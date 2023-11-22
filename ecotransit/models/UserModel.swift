@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class UserModel {
+    var id : String = ""
+    var role : String = ""
+    var email : String = ""
+    var name : String = ""
+    var lastname : String = ""
+    var verified : Bool = false
+    var tel : String = ""
+}

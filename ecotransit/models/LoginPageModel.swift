@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import Foundation
 
-class LoginPageModel: ObservableObject {
+class LoginPageModel: Identifiable ,ObservableObject {
     
     // Login Properties..
     @Published var email: String = ""
@@ -17,6 +18,7 @@ class LoginPageModel: ObservableObject {
     @Published var tel: String = ""
     @Published var nom : String = ""
     @Published var role : String = ""
+    @Published var token : String = ""
     
     // Register Properties
     @Published var registerUser: Bool = false
@@ -27,7 +29,11 @@ class LoginPageModel: ObservableObject {
 
     // Log Status...
     @AppStorage("log_Status") var log_Status: Bool = false
-    
+    @AppStorage("loading") var isloading: Bool = false
+    @AppStorage("token") var logger: String = ""
+
+
+
     // Login Call...
     func Login(){
         // Do Action Here...
@@ -56,7 +62,11 @@ class LoginPageModel: ObservableObject {
             log_Status = true
         }
     }
-    
+    func loading(){
+        withAnimation{
+            isloading = true
+        }
+    }
     func ForgotPassword(){
         withAnimation{
             Forgot_pass = true

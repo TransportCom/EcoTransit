@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct Liked: View {
-    
     // Delete Option...
     @State var showDeleteOption: Bool = false
     

@@ -10,11 +10,15 @@ import SwiftUI
 @main
 struct ecotransitApp: App {
     let persistenceController = PersistenceController.shared
+    @StateObject var loginPageModel = LoginPageModel()
+
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(loginPageModel)
+
         }
     }
 }

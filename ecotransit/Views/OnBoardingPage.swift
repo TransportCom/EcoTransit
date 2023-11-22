@@ -25,9 +25,10 @@ struct OnBoardingPage: View {
                 .fontWeight(.bold)
                 .foregroundColor(.white)
             
-            Image("OnBoard")
+            Image("logo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
             
             Button {
                 withAnimation{
@@ -43,7 +44,7 @@ struct OnBoardingPage: View {
                     .background(Color.white)
                     .cornerRadius(10)
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5, y: 5)
-                    .foregroundColor(.green)
+                    .foregroundColor(Color("background"))
             }
             .padding(.horizontal,30)
             // Adding Some Adjustments only for larger displays...
@@ -56,8 +57,7 @@ struct OnBoardingPage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
         
-            .green
-        )
+Color("background")        )
         .overlay(
         
             Group{

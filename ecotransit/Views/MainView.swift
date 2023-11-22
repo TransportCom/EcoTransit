@@ -89,7 +89,7 @@ enum Tab: String,CaseIterable{
     
     case Liked = "Liked"
     case Home = "Home"
-    case Profile = "Profile"
+    case Profile = "profilo"
 }
 
 #Preview {
